@@ -113,7 +113,7 @@ Hermes Gateway를 통해 Telegram과 연결할 수 있습니다.
 | Item | Requirement |
 | --- | --- |
 | OS | Windows 10/11 64-bit 권장 |
-| Hardware | AMD Ryzen / Radeon / Radeon PRO / EPYC 기반 시스템 권장 |
+| Hardware | AMD Ryzen / EPYC / Radeon / Radeon PRO 기반 시스템 권장 |
 | Network | 설치 파일 및 모델 다운로드를 위한 인터넷 연결 필요 |
 | Permission | 일부 설치 및 실행 과정에서 관리자 권한이 필요할 수 있음 |
 | Messenger | Telegram Bot Token 및 Chat ID 필요 |
