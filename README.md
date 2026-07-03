@@ -13,6 +13,19 @@ Local LLM, Agent, 메신저 연동 환경은 여러 프로그램 설치, 모델 
 
 이 런처는 기존에 있는 클라이언트와 도구들을 한 화면에서 설치하고 연결할 수 있도록 구성하여, 사용자가 복잡한 설정 과정을 최소화하고 PC에서 실행되는 Local AI Agent 환경을 빠르게 준비할 수 있도록 돕는 것을 목표로 합니다.
 
+## GPU / VRAM 선택 가이드
+
+런처에서 제공하는 모델은 VRAM 용량에 따라 아래와 같이 선택하는 것을 권장합니다.
+
+| 모델 | 권장 VRAM |
+| --- | --- |
+| Gemma 4 4B | 8GB |
+| Gemma 4 12B | 8GB ~ 16GB |
+| Gemma 4 26B | 16GB ~ 32GB |
+| Gemma 4 31B / Qwen 3.6 27B / 35B | 32GB |
+
+> 컨텍스트 길이, KV 캐시 양자화 설정에 따라 실제 요구 VRAM은 위 기준보다 늘어날 수 있습니다. VRAM이 부족하면 한 단계 낮은 모델 또는 KV 캐시 4비트/8비트 양자화 옵션을 사용해 주세요.
+
 ## Purpose
 
 이 프로젝트의 목적은 다음과 같습니다.
@@ -113,7 +126,7 @@ Hermes Gateway를 통해 Telegram과 연결할 수 있습니다.
 | Item | Requirement |
 | --- | --- |
 | OS | Windows 10/11 64-bit 권장 |
-| Hardware | AMD Ryzen / EPYC / Radeon / Radeon PRO 기반 시스템 권장 |
+| Hardware | AMD Ryzen / Radeon / Radeon PRO / EPYC 기반 시스템 권장 |
 | Network | 설치 파일 및 모델 다운로드를 위한 인터넷 연결 필요 |
 | Permission | 일부 설치 및 실행 과정에서 관리자 권한이 필요할 수 있음 |
 | Messenger | Telegram Bot Token 및 Chat ID 필요 |
@@ -151,14 +164,15 @@ Repository
 │  └─ images/
 │     └─ ai-pc-launcher-screenshot.png
 ├─ src/ or launcher files
-└─ AI_PC_Launcher_Setup_v2.0.0.exe
+└─ Releases
+   └─ AI_PC_Launcher_Setup_v1.0.0.exe
 ```
 
 ## Suggested Release File Names
 
 공개 배포용 파일명 예시는 다음과 같습니다.
 
-AI_PC_Launcher_Setup_v2.0.0.exe
+AI_PC_Launcher_Setup_v1.0.0.exe
 
 외부 공개용으로 배포하는 경우에는 브랜드 및 상표 사용 정책을 확인한 뒤 프로젝트명과 파일명을 결정하는 것을 권장합니다.
 
