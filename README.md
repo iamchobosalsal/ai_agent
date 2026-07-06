@@ -165,14 +165,14 @@ Repository
 │     └─ ai-pc-launcher-screenshot.png
 ├─ src/ or launcher files
 └─ Releases
-   └─ AI_PC_Launcher_Setup_v1.0.0.exe
+   └─ AI_PC_Launcher_Setup_v2.0.0.exe
 ```
 
 ## Suggested Release File Names
 
 공개 배포용 파일명 예시는 다음과 같습니다.
 
-AI_PC_Launcher_Setup_v1.0.0.exe
+AI_PC_Launcher_Setup_v2.0.0.exe
 
 외부 공개용으로 배포하는 경우에는 브랜드 및 상표 사용 정책을 확인한 뒤 프로젝트명과 파일명을 결정하는 것을 권장합니다.
 
