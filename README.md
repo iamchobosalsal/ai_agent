@@ -152,6 +152,16 @@ docs/install_guide.html
 7. 상태 화면에서 설치, AI, 모델 서버, Telegram 상태를 확인합니다.
 8. AI Agent를 실행하고 Telegram에서 대화를 시작합니다.
 
+
+
+## RAG 기능 추가
+
+ 1. 런처에서 상단 RAG 지식 베이스를 클릭합니다.
+ 2. 파일 추가 버튼 클릭하여 원하는 파일 추가 하면 문서 임베딩을 시작합니다.
+ 3. Hermes, 혹은 Telegram에서 /rag 질문하면, Local 문서 기반으로 추론을 시작 합니다.
+
+
+    
 ## Recommended Repository Structure
 
 Windows 실행 파일은 repository에 직접 커밋하기보다 GitHub Releases에 업로드하는 것을 권장합니다.
@@ -165,14 +175,14 @@ Repository
 │     └─ ai-pc-launcher-screenshot.png
 ├─ src/ or launcher files
 └─ Releases
-   └─ AI_PC_Launcher_Setup_v2.0.0.exe
+   └─ AI_PC_Launcher_Setup_v3.x.x.exe
 ```
 
 ## Suggested Release File Names
 
 공개 배포용 파일명 예시는 다음과 같습니다.
 
-AI_PC_Launcher_Setup_v2.0.0.exe
+AI_PC_Launcher_Setup_v3.0.0.exe
 
 외부 공개용으로 배포하는 경우에는 브랜드 및 상표 사용 정책을 확인한 뒤 프로젝트명과 파일명을 결정하는 것을 권장합니다.
 
