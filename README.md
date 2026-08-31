@@ -10,7 +10,14 @@ AI One-touch는 **LM Studio 기반 로컬 LLM**, **Hermes Agent**, **Telegram·S
 
 ## 다운로드
 
-설치 파일은 저장소에 직접 포함하지 않고 **[GitHub Releases](https://github.com/iamchobosalsal/ai_agent/releases)**에서 제공합니다.
+가장 간단한 방법은 저장소 상단의 초록색 **Code** 버튼을 누른 뒤 **Download ZIP**을 선택하는 것입니다.
+
+1. 내려받은 `ai_agent-main.zip`의 압축을 해제합니다.
+2. 압축을 푼 폴더의 `downloads`로 들어갑니다.
+3. 처음 설치한다면 `v3.7.23`, 기존 대시보드를 선호한다면 `v3.6.60` 폴더를 엽니다.
+4. 폴더 안의 `README_KO.txt`를 확인한 뒤 `1_Install_...bat` 파일을 **관리자 권한으로 실행**합니다.
+
+> 두 설치본은 자체서명 MSIX입니다. 설치 배치파일이 함께 제공된 공개 인증서를 등록하므로 Windows 관리자 권한이 필요합니다. 인증서 지문은 각 폴더의 `package-info.json`에서 확인할 수 있으며 개인키는 포함되어 있지 않습니다.
 
 | 버전 | 권장 대상 | 특징 |
 |---|---|---|
@@ -64,13 +71,14 @@ GPU와 VRAM이 부족하면 모델 실행 속도가 느려지거나 로딩에 �
 
 ## 설치 방법
 
-1. [Releases](https://github.com/iamchobosalsal/ai_agent/releases)에서 사용할 버전의 ZIP 파일을 내려받습니다.
-2. ZIP 파일의 압축을 완전히 해제합니다.
-3. 폴더 안의 설치 파일을 실행합니다.
-4. Windows의 안내에 따라 런처를 설치합니다.
-5. 런처를 열고 사용할 모델과 실행 방식을 확인합니다.
-6. **AI 환경 설치 시작** 또는 **처음 설치하기**를 누릅니다.
-7. 설치가 완료되면 **AI 켜기**를 눌러 모델 서버와 Hermes Agent를 실행합니다.
+1. 저장소의 **Code → Download ZIP**으로 전체 파일을 내려받습니다.
+2. `ai_agent-main.zip`의 압축을 완전히 해제합니다. 압축 파일 내부에서 설치 BAT을 바로 실행하지 마세요.
+3. `downloads/v3.7.23` 또는 `downloads/v3.6.60` 폴더를 엽니다.
+4. `1_Install_...bat` 파일을 우클릭하여 **관리자 권한으로 실행**합니다.
+5. 설치가 끝나면 바탕화면 또는 시작 메뉴에서 AI One-touch를 실행합니다.
+6. 런처를 열고 사용할 모델과 실행 방식을 확인합니다.
+7. **AI 환경 설치 시작** 또는 **처음 설치하기**를 누릅니다.
+8. 설치가 완료되면 **AI 켜기**를 눌러 모델 서버와 Hermes Agent를 실행합니다.
 
 - [v3.7 설치·사용 가이드](docs/v3.7/guide.html)
 - [v3.6 설치·사용 가이드](docs/v3.6/guide.html)
@@ -193,4 +201,3 @@ Copyright © 2026 [iamchobosalsal](https://github.com/iamchobosalsal). All right
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent)
 - [Telegram Bots](https://core.telegram.org/bots)
 - [Slack API](https://api.slack.com/)
-

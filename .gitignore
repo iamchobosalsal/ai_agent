@@ -7,7 +7,7 @@ staging/
 distribution-staging/
 .packages/
 
-# Packaged releases belong in GitHub Releases
+# Packaged releases and local build output
 *.exe
 *.msix
 *.msixbundle
@@ -42,3 +42,7 @@ models/
 Thumbs.db
 Desktop.ini
 
+# Published installer files included in Code > Download ZIP.
+# Keep this exception last so the public certificate and packaged binaries are included.
+!downloads/
+!downloads/**
