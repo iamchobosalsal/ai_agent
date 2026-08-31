@@ -1,0 +1,44 @@
+# Build output
+bin/
+obj/
+dist/
+output/
+staging/
+distribution-staging/
+.packages/
+
+# Packaged releases belong in GitHub Releases
+*.exe
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+*.zip
+
+# Signing and credentials
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+.env
+.env.*
+*token*
+*secret*
+*credential*
+
+# Runtime data
+data/
+runtime/
+state/
+logs/
+models/
+*.gguf
+
+# Local tooling
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+

@@ -1,228 +1,196 @@
-# AI PC Launcher for AMD System
+# AI One-touch
 
-> Windows에서 Local AI Agent 환경을 쉽게 설치하고 연결하기 위한 통합 런처입니다.  
-> Lemonade, LLM, Hermes Agent, Telegram 연동을 한 번의 흐름으로 준비할 수 있도록 도와줍니다.
+> AMD 시스템에서 로컬 언어모델과 AI Agent 환경을 쉽게 설치하고 관리하기 위한 Windows 런처입니다.
 
-![AI PC Launcher Screenshot](./docs/images/ai-pc-launcher-screenshot.png)
+AI One-touch는 **LM Studio 기반 로컬 LLM**, **Hermes Agent**, **Telegram·Slack 메신저 연동**, **웹 검색**, **문서 기반 RAG**를 하나의 화면에서 준비하고 실행할 수 있도록 도와줍니다.
 
-## Overview
+복잡한 명령어 입력 없이 그래픽카드를 확인하고, PC의 VRAM에 맞는 모델과 실행 설정을 선택할 수 있도록 구성했습니다.
 
-**AI PC Launcher for AMD System**은 AI Agent 설치와 연동이 어려운 사용자를 위해 만들어진 Windows용 설치/연동 런처입니다.
+> 이 프로젝트는 LM Studio, Element Labs, Nous Research, AMD, Telegram, Slack 또는 각 언어모델 제공자의 공식 제품이나 공식 배포판이 아닙니다.
 
-Local LLM, Agent, 메신저 연동 환경은 여러 프로그램 설치, 모델 선택, 모델 서버 실행, API 연결, Gateway 설정 등 여러 단계가 필요합니다. 이 과정은 AI Agent를 처음 사용하는 사용자에게 진입 장벽이 높을 수 있습니다.
+## 다운로드
 
-이 런처는 기존에 있는 클라이언트와 도구들을 한 화면에서 설치하고 연결할 수 있도록 구성하여, 사용자가 복잡한 설정 과정을 최소화하고 PC에서 실행되는 Local AI Agent 환경을 빠르게 준비할 수 있도록 돕는 것을 목표로 합니다.
+설치 파일은 저장소에 직접 포함하지 않고 **[GitHub Releases](https://github.com/iamchobosalsal/ai_agent/releases)**에서 제공합니다.
 
-## GPU / VRAM 선택 가이드
+| 버전 | 권장 대상 | 특징 |
+|---|---|---|
+| **v3.7.23** | 처음 설치하는 사용자 | 설치 과정을 단순화한 초보자용 UI, 자세한 다운로드 진행 상태 |
+| **v3.6.60** | 기존 화면과 상세 관리 기능을 선호하는 사용자 | 대시보드 중심의 안정화 UI와 상세 진행 로그 |
 
-런처에서 제공하는 모델은 VRAM 용량에 따라 아래와 같이 선택하는 것을 권장합니다.
+처음 사용하는 경우 **v3.7**을 권장합니다.
 
-| 모델 | 권장 VRAM |
-| --- | --- |
-| Gemma 4 4B | 8GB |
-| Gemma 4 12B | 8GB ~ 16GB |
-| Gemma 4 26B | 16GB ~ 32GB |
-| Gemma 4 31B / Qwen 3.6 27B / 35B | 32GB |
+## 주요 기능
 
-> 컨텍스트 길이, KV 캐시 양자화 설정에 따라 실제 요구 VRAM은 위 기준보다 늘어날 수 있습니다. VRAM이 부족하면 한 단계 낮은 모델 또는 KV 캐시 4비트/8비트 양자화 옵션을 사용해 주세요.
+- AMD 그래픽카드와 VRAM 자동 확인
+- PC 사양에 맞는 언어모델과 컨텍스트 설정 안내
+- AMD ROCm 우선 실행 및 Vulkan 호환 모드 지원
+- KV 캐시 8비트(Q8) 기본 설정
+- LM Studio 설치와 로컬 모델 서버 실행
+- Hermes Agent 자동 설치 및 로컬 LLM 연결
+- Telegram·Slack 메신저 연동
+- 웹 검색 도구와 문서 도구 설치
+- PDF·Word·Excel·PowerPoint·CSV·TXT·Markdown·JSON 문서 등록
+- 로컬 문서 기반 RAG 검색
+- AI 켜기·끄기와 현재 실행 상태 확인
+- 런처 초기화 및 내려받은 언어모델 관리
 
-## Purpose
+## 화면
 
-이 프로젝트의 목적은 다음과 같습니다.
+### v3.7 — 처음 사용하기 쉬운 화면
 
-- AI Agent 설치가 어려운 사용자를 위한 쉬운 진입점 제공
-- Local LLM 실행 환경 구성 단순화
-- Lemonade, LLM, Hermes Agent, Telegram 연동 과정 지원
-- 웹 검색, 문서 도구, 대화 정리 등 Agent 기능 확장을 위한 기반 제공
-- AI PC에서 로컬 기반 Agent 활용 경험 제공
-- 교육, 데모, PoC 환경에서 빠르게 Local AI Agent 환경을 구성할 수 있는 도구 제공
+설치할 항목과 현재 진행 상태를 큰 화면에서 순서대로 보여줍니다. 언어모델을 내려받는 동안에는 진행률, 내려받은 용량, 속도, 남은 시간과 마지막 상태 확인 시각을 표시합니다.
 
-## Main Workflow
+![AI One-touch v3.7](docs/images/v3.7-home.png)
 
-```text
-Lemonade → LLM → Hermes Agent → Telegram
-```
+![v3.7 언어모델 다운로드](docs/images/v3.7-model-download.png)
 
-기본 동작 흐름은 다음과 같습니다.
+### v3.6 — 상세 대시보드
 
-1. Lemonade 실행 환경을 준비합니다.
-2. 사용자가 선택한 LLM 모델을 준비하고 실행합니다.
-3. Hermes Agent와 모델 서버를 연결합니다.
-4. Hermes Gateway를 통해 Telegram과 연결합니다.
-5. 사용자는 Telegram을 통해 Local AI Agent와 대화할 수 있습니다.
+LM Studio, 언어모델, Hermes Agent와 메신저의 상태를 한 화면에서 확인하고 진행 로그를 상세하게 볼 수 있습니다.
 
-## Key Features
+![AI PC Launcher v3.6](docs/images/v3.6-dashboard.png)
 
-### 1. One-click setup
+## 시스템 요구 사항
 
-Lemonade, 선택 모델, Hermes Agent 연결을 한 번에 준비할 수 있는 설치 메뉴를 제공합니다.
+| 항목 | 요구 사항 |
+|---|---|
+| 운영체제 | Windows 10 또는 Windows 11 64비트 |
+| GPU | AMD Radeon·Radeon PRO 계열 권장 |
+| 메모리 | 선택한 모델과 컨텍스트 길이에 따라 달라짐 |
+| 저장 공간 | 런처 외에 언어모델당 약 6~23GB 이상 필요 |
+| 네트워크 | LM Studio, Hermes Agent와 언어모델을 처음 설치할 때 필요 |
 
-- Lemonade 설치 준비
-- LLM 모델 선택 및 실행 준비
-- Hermes Agent 연결
-- Telegram Gateway 연동 준비
+GPU와 VRAM이 부족하면 모델 실행 속도가 느려지거나 로딩에 실패할 수 있습니다. 이 경우 더 작은 모델을 선택하거나 컨텍스트 길이와 KV 캐시 설정을 낮춰 주세요.
 
-### 2. Status dashboard
+## 설치 방법
 
-현재 설치 및 실행 상태를 한 화면에서 확인할 수 있습니다.
+1. [Releases](https://github.com/iamchobosalsal/ai_agent/releases)에서 사용할 버전의 ZIP 파일을 내려받습니다.
+2. ZIP 파일의 압축을 완전히 해제합니다.
+3. 폴더 안의 설치 파일을 실행합니다.
+4. Windows의 안내에 따라 런처를 설치합니다.
+5. 런처를 열고 사용할 모델과 실행 방식을 확인합니다.
+6. **AI 환경 설치 시작** 또는 **처음 설치하기**를 누릅니다.
+7. 설치가 완료되면 **AI 켜기**를 눌러 모델 서버와 Hermes Agent를 실행합니다.
 
-- 설치 완료 여부
-- AI 실행 상태
-- 모델 서버 실행 상태
-- Telegram 준비 상태
-- 진행 로그 및 작업 ID 확인
+- [v3.7 설치·사용 가이드](docs/v3.7/guide.html)
+- [v3.6 설치·사용 가이드](docs/v3.6/guide.html)
 
-### 3. Model selection
+### 언어모델 다운로드가 오래 걸릴 때
 
-사용 목적에 맞춰 모델을 선택할 수 있습니다.
+Qwen 고성능 모델은 약 16~22GB를 내려받을 수 있습니다. 진행 막대가 천천히 움직이더라도 다음 값이 갱신되고 있다면 정상적으로 진행 중입니다.
 
-- 초급형 모델
-- 기본 모델
-- 품질 우선 모델
-- 고성능 모델
-- Qwen 3.6 계열 모델 선택
-- KV 캐시 양자화 옵션
-- 컨텍스트 길이 설정
+- 다운로드 진행률
+- 내려받은 용량 / 전체 용량
+- 다운로드 속도
+- 예상 남은 시간
+- 마지막 상태 확인 시각
 
-### 4. Daily-use controls
+설치 중에는 런처와 LM Studio를 강제로 종료하지 마세요.
 
-설치 후 일상적으로 사용할 수 있는 제어 버튼을 제공합니다.
+## AI 켜기와 끄기
 
-- AI 켜기
-- AI 끄기
-- 대화 정리
-- Telegram 연결
+- **AI 켜기**: 선택한 언어모델을 LM Studio에 불러오고 Hermes Agent와 설정된 메신저 연결을 시작합니다.
+- **AI 끄기**: Hermes Agent와 모델 서버를 순서대로 종료하고 사용 중인 VRAM을 해제합니다.
 
-### 5. Skill expansion
+Windows 작업 관리자에서 GPU 사용률이 남아 보이더라도 전용 GPU 메모리와 Compute 사용량이 내려갔다면 정상적으로 종료된 상태일 수 있습니다.
 
-Agent의 기능을 확장하기 위한 스킬 설치 및 등록 메뉴를 제공합니다.
+## 언어모델 변경
 
-- 웹 검색 도구
-- 문서 도구
-- 스킬 설치 준비
-- Hermes skill 식별자, GitHub URL, 로컬 폴더 기반 스킬 등록
+언어모델을 변경할 때는 반드시 다음 순서를 지켜 주세요.
 
-### 6. Telegram integration
+1. 대시보드에서 **AI 끄기**
+2. 모델 관리에서 새 모델 선택
+3. 모델 설정 저장
+4. 대시보드로 돌아가 **AI 켜기**
 
-Hermes Gateway를 통해 Telegram과 연결할 수 있습니다.
+AI가 실행 중인 상태에서 모델만 변경하면 이전 모델이 메모리에 남거나 설정이 즉시 반영되지 않을 수 있습니다.
 
-- Bot Token 저장
-- Chat ID 입력
-- Telegram 연결 실행
-- 메신저 기반 Agent 사용 준비
+## 모델 선택 안내
 
-## Use Cases
+| 모델 | 권장 VRAM | 용도 |
+|---|---:|---|
+| 경량 모델 | 8GB 이상 | 빠른 시작, 간단한 작업 |
+| 기본 모델 | 12~16GB 이상 | 속도와 품질의 균형 |
+| Qwen 3.6 27B | 24GB 이상 | 문서 처리와 일반 추론 |
+| Qwen 3.6 35B-A3B | 32GB 이상 | 복잡한 추론과 품질 우선 작업 |
+| Qwen 3.8 27B | 32GB 이상 | 품질을 우선하는 최신 선택지 |
 
-이 런처는 다음과 같은 사용자에게 적합합니다.
+실제 요구 메모리는 컨텍스트 길이, KV 캐시 양자화, GPU 드라이버와 다른 실행 프로그램에 따라 달라질 수 있습니다.
 
-- AI Agent를 사용해보고 싶지만 설치 과정이 어려운 사용자
-- Local LLM, Agent, Telegram 연동을 직접 구성하기 어려운 사용자
-- AI PC에서 로컬 기반 개인 비서 환경을 구성하고 싶은 사용자
-- 웹 검색, 문서 분석, 파일 정리, 대화 정리 같은 Agent 기능을 쉽게 사용하고 싶은 사용자
-- 교육, 데모, PoC 환경에서 빠르게 Local AI Agent 구성을 보여줘야 하는 사용자
+## 문서 기반 RAG
 
-## System Requirements
+PDF, Word, Excel, PowerPoint, CSV, TXT, Markdown, JSON 문서를 런처에 등록하여 로컬 지식베이스로 사용할 수 있습니다.
 
-| Item | Requirement |
-| --- | --- |
-| OS | Windows 10/11 64-bit 권장 |
-| Hardware | AMD Ryzen / Radeon / Radeon PRO / EPYC 기반 시스템 권장 |
-| Network | 설치 파일 및 모델 다운로드를 위한 인터넷 연결 필요 |
-| Permission | 일부 설치 및 실행 과정에서 관리자 권한이 필요할 수 있음 |
-| Messenger | Telegram Bot Token 및 Chat ID 필요 |
-
-> 실제 요구 사양은 선택하는 LLM 모델, 컨텍스트 길이, KV 캐시 설정, GPU/VRAM 구성에 따라 달라질 수 있습니다.
-
-## Installation
-
-사용자 설치 방법은 별도 HTML 매뉴얼을 참고해 주세요.
+등록한 문서는 사용자의 PC 안에서 청크와 임베딩으로 처리됩니다. 일반 대화와 문서 질문을 구분하려면 질문 앞에 `/rag`를 붙일 수 있습니다.
 
 ```text
-docs/install_guide.html
+/rag 이 계약서의 만기일과 담당자를 표로 정리해줘
 ```
 
-기본 설치 흐름은 다음과 같습니다.
+민감한 문서를 등록하기 전에는 메신저 연결 범위와 Hermes Agent의 도구 권한을 확인하세요.
 
-1. GitHub Releases 페이지에서 최신 설치 파일을 다운로드합니다.
-2. `AI_PC_Launcher_Setup_vX.X.X.exe`를 실행합니다.
-3. 런처에서 **처음 설치하기**를 선택합니다.
-4. 사용할 LLM 모델을 선택합니다.
-5. Telegram Bot Token과 Chat ID를 입력합니다.
-6. 설정을 저장한 뒤 Telegram 연결을 실행합니다.
-7. 상태 화면에서 설치, AI, 모델 서버, Telegram 상태를 확인합니다.
-8. AI Agent를 실행하고 Telegram에서 대화를 시작합니다.
+## 메신저 연동
 
+Hermes Agent Gateway를 이용하여 Telegram 또는 Slack에서 로컬 AI와 대화할 수 있습니다.
 
+- Telegram: Bot Token과 허용할 Chat ID 필요
+- Slack: App Token, Bot Token과 허용 사용자 설정 필요
+- 외부에서 들어오는 요청은 반드시 허용 목록을 설정하여 제한할 것을 권장
 
-## RAG 기능 추가
+토큰과 개인 설정 파일은 GitHub나 다른 공개 장소에 업로드하지 마세요.
 
- 1. 런처에서 상단 RAG 지식 베이스를 클릭합니다.
- 2. 파일 추가 버튼 클릭하여 원하는 파일 추가 하면 문서 임베딩을 시작합니다.
- 3. Hermes, 혹은 Telegram에서 /rag 질문하면, Local 문서 기반으로 추론을 시작 합니다.
+## 초기화와 삭제
 
+배포 파일에 포함된 Reset Tool에서 다음 작업을 수행할 수 있습니다.
 
-    
-## Recommended Repository Structure
+- 런처 실행 환경과 사용자 설정 초기화
+- LM Studio와 Hermes Agent 연결 설정 정리
+- 런처가 관리하는 언어모델 확인 및 선택 삭제
+- 전체 초기화 후 재설치 준비
 
-Windows 실행 파일은 repository에 직접 커밋하기보다 GitHub Releases에 업로드하는 것을 권장합니다.
+런처 초기화와 언어모델 삭제는 서로 다른 작업입니다. 내려받은 모델을 보존하려면 초기화 전 Reset Tool의 선택 내용을 확인하세요.
 
-```text
-Repository
-├─ README.md
-├─ docs/
-│  ├─ install_guide.html
-│  └─ images/
-│     └─ ai-pc-launcher-screenshot.png
-├─ src/ or launcher files
-└─ Releases
-   └─ AI_PC_Launcher_Setup_v3.x.x.exe
-```
+## 개인정보와 네트워크 사용
 
-## Suggested Release File Names
+언어모델 추론과 등록 문서 처리는 기본적으로 사용자의 PC에서 수행됩니다. 다만 다음 기능은 인터넷 연결 또는 외부 서비스 통신이 필요합니다.
 
-공개 배포용 파일명 예시는 다음과 같습니다.
+- LM Studio, Hermes Agent와 언어모델 다운로드
+- 웹 검색과 URL 내용 확인
+- Telegram·Slack 메시지 송수신
+- 사용자가 별도로 연결한 외부 API 및 스킬
 
-AI_PC_Launcher_Setup_v3.0.0.exe
+외부 서비스에는 각 서비스의 개인정보 처리방침과 이용약관이 적용됩니다.
 
-외부 공개용으로 배포하는 경우에는 브랜드 및 상표 사용 정책을 확인한 뒤 프로젝트명과 파일명을 결정하는 것을 권장합니다.
+## 문제 해결
 
-## Security Notice
+문제가 발생하면 현재 단계, 오류 문구, 런처 버전, Windows 버전, GPU·VRAM, 선택 모델과 실행 런타임을 확인해 주세요.
 
-이 런처는 Local AI Agent 실행 환경을 구성하기 위해 외부 프로그램 설치, 모델 다운로드, 로컬 서버 실행, 메신저 Gateway 연결 등의 작업을 수행할 수 있습니다.
+재현 가능한 오류는 [GitHub Issues](https://github.com/iamchobosalsal/ai_agent/issues)에 화면 캡처와 로그를 함께 등록해 주세요. Bot Token, Chat ID, 사용자 경로와 같은 개인정보는 반드시 가린 후 첨부해야 합니다.
 
-사용자는 설치 전 다음 내용을 확인해야 합니다.
+## Third-Party Software Notice
 
-- 어떤 프로그램이 설치되는지
-- 어떤 폴더에 파일이 저장되는지
-- 외부 네트워크 연결이 필요한지
-- 관리자 권한이 필요한지
-- 삭제 방법은 무엇인지
-- 백신 또는 Windows SmartScreen 경고가 발생할 수 있는지
+본 런처는 LM Studio, Hermes Agent, 제3자 LLM 모델, Telegram·Slack 등 제3자가 제공하는 소프트웨어, 오픈소스 구성 요소, 모델 및 서비스를 쉽게 설치하고 연동할 수 있도록 지원하는 독립적인 도구입니다.
 
-공식 배포 시에는 코드 서명 인증서 적용을 권장합니다.
+LM Studio 데스크톱 앱과 언어모델 파일은 본 저장소에 포함하거나 재배포하지 않으며, 사용자의 PC에서 각 제공자가 안내하는 공식 배포 경로를 통해 내려받습니다. 각 구성 요소의 사용, 수정, 상업적 이용 및 재배포에는 해당 제공자의 라이선스와 이용 조건이 적용됩니다.
 
-## Uninstall
+본 프로젝트는 LM Studio, Element Labs, Nous Research, AMD, Telegram, Slack 또는 각 언어모델 제공자의 공식 제품이나 공식 배포판이 아니며, 별도의 명시가 없는 한 해당 업체 및 프로젝트와의 제휴·보증·승인·후원을 의미하지 않습니다.
 
-삭제 방법은 Reset_Tool.exe 를 이용하여 가능합니다.
+자세한 내용은 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)를 확인해 주세요.
 
-삭제 시 다음 항목이 삭제 됩니다.
-- 런처 프로그램 삭제
-- Lemonade 관련 파일 삭제
-- Hermes Agent 관련 파일 삭제
-- 임시 로그 및 캐시 파일 삭제
+## 라이선스 및 재배포
 
-언어 모델은 별도로 삭제 할 수 있습니다.
+본 런처 자체의 실행 파일, 설치 구성, 사용자 인터페이스, 문서 및 제작자가 직접 작성한 구성 요소의 권리는 제작자에게 있습니다.
 
-## Third-Party Software and Redistribution Notice
+공식 배포본을 정상적으로 내려받아 설치하고 사용하는 데 필요한 범위를 제외하고, 사전 서면 허가 없이 이를 수정·판매·재패키징하거나 수정된 버전을 공식 배포본인 것처럼 표시하여 배포하는 행위를 금지합니다.
 
-본 런처는 Lemonade, Hermes Agent, LLM 모델 등 제3자가 제공하는 오픈소스 소프트웨어와 서비스를 보다 쉽게 설치하고 연동할 수 있도록 지원하는 도구입니다.
+저장소가 공개되어 있다는 사실만으로 오픈소스 라이선스 또는 별도의 재배포 권한이 부여되는 것은 아닙니다. 자세한 이용 조건은 [LICENSE.md](LICENSE.md)를 확인해 주세요.
 
-각 오픈소스 프로그램, 라이브러리 및 모델의 저작권과 권리는 해당 개발자 및 권리자에게 있으며, 사용·수정·상업적 이용·재배포에는 각 구성 요소의 라이선스와 이용 조건이 적용됩니다.
+Copyright © 2026 [iamchobosalsal](https://github.com/iamchobosalsal). All rights reserved.
 
-본 런처를 이용하여 구성된 환경을 상업적으로 사용하는 경우, 사용자는 각 소프트웨어와 모델의 라이선스 및 이용 조건을 직접 확인하고 준수해야 합니다. 라이선스 위반이나 상업적 이용으로 발생하는 문제에 대해 본 런처의 제작자는 책임을 지지 않습니다.
+## 관련 프로젝트
 
-다만, 본 런처 자체의 실행 파일, 설치 구성, 화면, 문서 및 제작자가 직접 작성한 구성 요소를 사전 허가 없이 수정·복제·판매·재패키징하거나, 수정된 버전을 공식 배포본인 것처럼 배포하는 행위를 금지합니다.
+- [LM Studio](https://lmstudio.ai/)
+- [Hermes Agent](https://github.com/NousResearch/hermes-agent)
+- [Telegram Bots](https://core.telegram.org/bots)
+- [Slack API](https://api.slack.com/)
 
-이를 위반한 경우 제작자는 배포 중단 및 삭제를 요청하고, 저작권법 등 관련 법령에 따른 조치를 취할 수 있습니다.
-
-본 프로젝트는 Lemonade, Nous Research, Telegram 또는 각 LLM 모델 제공자의 공식 제품이나 공식 배포판이 아니며, 별도의 명시가 없는 한 해당 업체와의 제휴·보증·후원을 의미하지 않습니다.
