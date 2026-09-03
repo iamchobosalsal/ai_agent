@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AI One-touch v3.7.23 왕초보 사용가이드</title>
+  <title>AI One-touch v3.7.24 왕초보 사용가이드</title>
   <style>
     :root{--ink:#18251d;--sub:#5e6b61;--line:#26372d;--paper:#f4f0d6;--panel:#d7d4b8;--green:#4cae58;--green-dark:#24582e;--brown:#a56e3b;--red:#a96157;--sky:#bfe8f7;--shadow:#283229}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(#bfeafa 0 48%,#79bc5d 48% 53%,#80563c 53%);background-attachment:fixed;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.65}
@@ -12,7 +12,7 @@
     @media print{body{background:#fff}.page{width:100%;margin:0;border:0;box-shadow:none}.quick-nav,.lightbox{display:none!important}.step{break-inside:avoid;box-shadow:none}.shot{box-shadow:none}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
   </style>
   <style>
-    /* v3.7.23: 런처의 차분한 흰색·초록색 화면과 같은 사용가이드 테마 */
+    /* v3.7.24: 런처의 차분한 흰색·초록색 화면과 같은 사용가이드 테마 */
     :root{--ink:#202522;--sub:#6f7771;--line:#d8d7d1;--paper:#fff;--panel:#f4f4f1;--green:#259260;--green-dark:#126b46;--brown:#eceeea;--red:#bd4e59;--sky:#f1f2ef;--shadow:rgba(32,45,38,.10)}
     body{color:var(--ink);background:#f1f2ef;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.68}
     .page{width:min(1160px,calc(100% - 28px));margin:24px auto 56px;background:#fff;border:1px solid #d8d7d1;border-radius:24px;box-shadow:0 18px 48px rgba(32,45,38,.10);overflow:hidden}
@@ -32,7 +32,7 @@
   <div class="page">
     <header class="hero">
       <div class="brand"><div class="logo">AI</div><div><h1>AI One-touch 왕초보 사용가이드</h1><p>설치부터 AI 실행, 메신저 연결, 문서 RAG 사용까지 한 번에 따라 하기</p></div></div>
-      <span class="version">초보자용 · v3.7.23</span>
+      <span class="version">초보자용 · v3.7.24</span>
     </header>
     <nav class="quick-nav" aria-label="빠른 이동">
       <a href="#install">1. 설치·실행</a><a href="#power">2. AI 켜기</a><a href="#messenger">3. 메신저</a><a href="#documents">4. 문서 등록</a><a href="#rag">5. /rag 사용</a><a href="#help">6. 문제 해결</a>
@@ -53,10 +53,10 @@
           <div class="file"><span>APP</span><div><b>시작 메뉴 → AI One-touch Beginner</b><small>바탕화면 아이콘이 보이지 않을 때 사용할 수 있는 실행 방법입니다.</small></div></div>
           <div class="file"><span>GO</span><div><b>AI PC 준비 시작</b><small>처음 실행한 PC에서는 이 버튼을 한 번 누릅니다. LM Studio, 모델, Hermes와 기본 도구를 순서대로 준비합니다.</small></div></div>
         </div>
-        <div class="shot"><img src="guide-assets/00-install.png" alt="AI One-touch v3.7.23 처음 설치하기 화면" data-zoom><p class="caption">처음 실행하면 AI PC 준비 화면이 나타납니다. 초록색 <b>AI PC 준비 시작</b>을 한 번 누르면 됩니다.</p></div>
+        <div class="shot"><img src="guide-assets/00-install.png" alt="AI One-touch v3.7.24 처음 설치하기 화면" data-zoom><p class="caption">처음 실행하면 AI PC 준비 화면이 나타납니다. 초록색 <b>AI PC 준비 시작</b>을 한 번 누르면 됩니다.</p></div>
         <div class="tip"><b>이미 설치했던 PC:</b> 새 배포본의 설치 BAT을 다시 실행하면 앱은 업데이트되고 바탕화면 바로가기도 자동으로 생성됩니다. 제거 BAT을 실행하면 바로가기도 함께 삭제됩니다.</div>
         <div class="tip warn"><b>첫 설치는 오래 걸릴 수 있습니다.</b> 모델 크기가 약 16~22GB이므로 인터넷 속도에 따라 수십 분 이상 걸릴 수 있습니다. 진행 중에는 창을 닫지 마세요.</div>
-        <div class="shot"><img src="guide-assets/06-model-download.png" alt="AI One-touch v3.7.23 언어모델 다운로드 진행 화면" data-zoom><p class="caption"><b>언어모델 다운로드 중</b>, 내려받은 용량·전체 용량·속도·남은 시간·마지막 상태 확인 시간이 표시됩니다. 줄무늬 진행 막대가 움직이고 상태 확인 시간이 갱신되면 멈춘 것이 아닙니다.</p></div>
+        <div class="shot"><img src="guide-assets/06-model-download.png" alt="AI One-touch v3.7.24 언어모델 다운로드 진행 화면" data-zoom><p class="caption"><b>언어모델 다운로드 중</b>, 내려받은 용량·전체 용량·속도·남은 시간·마지막 상태 확인 시간이 표시됩니다. 줄무늬 진행 막대가 움직이고 상태 확인 시간이 갱신되면 멈춘 것이 아닙니다.</p></div>
         <div class="tip"><b>다운로드가 정상인지 확인하는 법:</b> 화면에 <b>정상 진행 중</b> 또는 퍼센트가 보이고 <b>상태 확인 시간</b>이 계속 바뀌면 정상입니다. 오류 문구가 나오지 않았다면 모델이 큰 것이므로 기다려 주세요.</div>
       </section>
 
@@ -64,13 +64,14 @@
         <span class="step-number">STEP 02</span>
         <h2>메인 화면에서 AI 켜기</h2>
         <p class="step-lead">설치가 끝나면 아래와 같은 전원 화면이 표시됩니다. 초록색 <b>AI 켜기</b> 버튼을 누르세요.</p>
-        <div class="shot"><img src="guide-assets/01-home.png" alt="AI One-touch v3.7.23 메인 전원 화면" data-zoom><p class="caption">① 초록색 AI 켜기 · ② 메신저 연결 · ③ 문서 등록</p></div>
+        <div class="shot"><img src="guide-assets/01-home.png" alt="AI One-touch v3.7.24 메인 전원 화면" data-zoom><p class="caption">① 초록색 AI 켜기 · ② 메신저 연결 · ③ 문서 등록</p></div>
         <div class="actions"><div class="action"><b>AI 켜기</b>모델 서버와 Hermes를 실행합니다.</div><div class="action"><b>AI 끄기</b>모델 서버와 메신저 Gateway를 종료합니다.</div><div class="action"><b>뒤로가기</b>메신저·문서 화면에서 마우스 뒤로가기 버튼도 사용할 수 있습니다.</div></div>
         <h3>실행할 모델 선택</h3>
-        <p>AI 켜기를 누르면 모델 선택 화면이 나타납니다. 빠른 응답은 <b>Qwen 3.6 35B-A3B</b>, 답변 품질 우선은 <b>Qwen 3.8 27B</b>를 선택하세요.</p>
+        <p>런처는 현재 GPU와 VRAM을 확인해 권장 모델을 자동으로 선택합니다. 16GB급 GPU에는 <b>Gemma 4 26B A4B IT</b>, 32GB급 GPU에는 <b>Qwen 3.6 35B-A3B</b>가 권장됩니다.</p>
         <div class="shot"><img src="guide-assets/02-model-select.png" alt="AI One-touch 모델 선택 화면" data-zoom><p class="caption">모델 카드를 누르는 즉시 AI 시작 작업이 진행됩니다.</p></div>
         <div class="tip"><b>권장:</b> 잘 모르겠다면 기본 추천 모델을 선택하세요. 상태 문구가 <b>AI가 켜져 있습니다</b>로 바뀌면 준비 완료입니다.</div>
         <div class="tip warn"><b>언어모델을 바꿀 때:</b> 먼저 <b>AI 끄기</b> → 모델 선택 및 저장 → <b>AI 다시 켜기</b> 순서로 진행하세요. AI가 실행 중일 때 모델 설정을 바꾸지 마세요.</div>
+        <div class="tip"><b>GPU를 교체했다면:</b> v3.7.24는 이전 GPU 이름·VRAM과 현재 하드웨어를 비교해 권장 모델을 다시 선택합니다. 이전에 내려받은 모델은 삭제되지 않으며, 새 권장 모델이 없다면 AI 켜기 시 최초 다운로드가 진행됩니다.</div>
       </section>
 
       <section class="step" id="messenger">
@@ -125,7 +126,7 @@
         <div class="tip">위 순서대로 재시도·재설치·초기화를 진행하면 사용자가 직접 복구할 수 있습니다.</div>
       </section>
     </main>
-    <footer class="footer"><b>AI One-touch Beginner v3.7.23</b> · 이 문서는 인터넷 연결 없이 열 수 있습니다. · 화면 이미지를 누르면 크게 볼 수 있습니다.</footer>
+    <footer class="footer"><b>AI One-touch Beginner v3.7.24</b> · 이 문서는 인터넷 연결 없이 열 수 있습니다. · 화면 이미지를 누르면 크게 볼 수 있습니다.</footer>
   </div>
   <div class="lightbox" id="lightbox" role="dialog" aria-label="화면 이미지 크게 보기"><img id="lightboxImage" alt="확대 화면"></div>
   <script>
