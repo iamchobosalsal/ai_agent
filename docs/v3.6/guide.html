@@ -210,7 +210,7 @@
         <strong>KV 캐시 Q8</strong>
         <strong>VRAM 기반 모델 자동 선택</strong>
       </div>
-      <p class="version">Local · v3.6.63</p>
+      <p class="version">Local + Cloud API · v3.6.77</p>
     </aside>
 
     <div class="main">
@@ -218,9 +218,9 @@
         <div>
           <p class="kicker">USER GUIDE</p>
           <h1>설치 및 사용 가이드</h1>
-          <p>현재 3.6 UI와 실행 환경을 기준으로 설명합니다.</p>
+          <p>현재 3.6.77 UI와 로컬 AI·Cloud API 실행 환경을 기준으로 설명합니다.</p>
         </div>
-        <div class="top-status"><span class="pulse"></span><div><b>기준 환경: 준비됨</b><span>ROCm · KV Q8 · 로컬 AI</span></div></div>
+        <div class="top-status"><span class="pulse"></span><div><b>기준 환경: 준비됨</b><span>ROCm 로컬 AI · Cloud API</span></div></div>
       </header>
 
       <main>
@@ -228,8 +228,8 @@
           <div class="hero-copy">
             <div class="section-tag"><span>00</span>OVERVIEW</div>
             <h2>설치는 한 번,<br>일상 사용은 스위치 한 번.</h2>
-            <p>AI One-touch v3.6은 AMD PC에서 LM Studio 언어모델과 Hermes, Telegram·Slack, 문서 기반 RAG를 한 화면에서 관리하는 로컬 AI 런처입니다.</p>
-            <div class="hero-chips"><span class="chip green">AMD 환경 최적화</span><span class="chip">로컬 우선</span><span class="chip">Windows</span><span class="chip">오프라인 HTML 가이드</span></div>
+            <p>AI One-touch v3.6은 AMD PC에서 LM Studio 로컬 모델 또는 외부 Cloud API 모델을 Hermes, Telegram·Slack, 문서 기반 RAG와 연결해 한 화면에서 관리하는 AI 런처입니다.</p>
+            <div class="hero-chips"><span class="chip green">AMD 환경 최적화</span><span class="chip">로컬·클라우드 선택</span><span class="chip">Windows</span><span class="chip">오프라인 HTML 가이드</span></div>
           </div>
           <div class="hero-spec">
             <h3>현재 기본 동작</h3>
@@ -241,6 +241,8 @@
           </div>
         </section>
 
+        <div class="callout"><b>v3.6.77 업데이트:</b> Cloud API 연결, 16GB GPU용 Gemma 4 26B QAT 설정, Qwen3 임베딩 기반 RAG, 한·영 화면 전환 안정화, 재실행 시 기존 창 재사용을 반영했습니다.</div>
+
         <section class="content-section" id="install">
           <div class="section-head"><span class="section-num">01</span><div><h2>설치와 업데이트</h2><p>ZIP 내부에서 바로 실행하지 말고 새 폴더에 완전히 압축 해제한 뒤 설치합니다.</p></div></div>
           <div class="flow">
@@ -249,7 +251,7 @@
             <article><small>LAUNCH</small><b>바탕화면 바로가기</b><p><b>AI One-touch Internal</b> 아이콘으로 런처를 실행합니다.</p></article>
             <article><small>UPDATE</small><b>새 버전 재설치</b><p>런처를 완전히 종료한 후 새 ZIP의 설치 BAT을 다시 실행합니다.</p></article>
           </div>
-          <div class="callout"><b>업데이트:</b> 상위 버전을 설치하면 기존 설정과 내려받은 LM Studio 모델은 유지하면서 런처가 업데이트됩니다. 화면이 예전과 같다면 왼쪽 아래 버전이 <b>v3.6.63</b>인지 먼저 확인하세요.</div>
+          <div class="callout"><b>업데이트:</b> 상위 버전을 설치하면 기존 설정, API 연결 정보와 내려받은 LM Studio 모델은 유지하면서 런처가 업데이트됩니다. 화면이 예전과 같다면 왼쪽 아래 버전이 <b>v3.6.77</b>인지 먼저 확인하세요.</div>
         </section>
 
         <section class="content-section" id="setup">
@@ -263,7 +265,7 @@
           </ol>
           <div class="cards">
             <div class="card"><span class="tag green">VRAM 28GB+</span><b>Qwen 3.6 35B-A3B</b><p>큰 VRAM 환경에서 고급 추론과 긴 문서 처리를 우선합니다.</p></div>
-            <div class="card"><span class="tag">VRAM 14GB+</span><b>Gemma 4 26B A4B IT</b><p>중간급 VRAM에서 품질과 메모리 사용량의 균형을 맞춥니다.</p></div>
+            <div class="card"><span class="tag">VRAM 16GB+</span><b>Gemma 4 26B A4B IT QAT</b><p>16GB급 GPU에 맞춘 QAT 모델입니다. 검증된 GPU 우선 설정과 65K 컨텍스트로 실행됩니다.</p></div>
             <div class="card"><span class="tag">VRAM 14GB 미만</span><b>Gemma 4 E4B IT</b><p>메모리가 작은 환경에서 가볍고 빠르게 시작합니다.</p></div>
           </div>
           <div class="callout warning"><b>컨텍스트 길이:</b> 모델 관리에서 조절할 수 있습니다. 긴 컨텍스트는 더 많은 VRAM·시스템 RAM을 사용하므로, 평소 사용하던 값이 있더라도 모델이나 런타임을 바꾼 뒤에는 메모리 상태를 확인하세요.</div>
@@ -280,8 +282,20 @@
         </section>
 
         <section class="content-section" id="model">
-          <div class="section-head"><span class="section-num">04</span><div><h2>모델 관리와 LM Studio 다운로드</h2><p>기본 모델, 이미 설치한 모델, 로컬 GGUF 및 LM Studio에서 찾은 모델을 선택할 수 있습니다.</p></div></div>
+          <div class="section-head"><span class="section-num">04</span><div><h2>로컬 AI와 Cloud API 선택</h2><p>LM Studio 로컬 모델과 외부 Cloud API 중 Hermes가 사용할 언어모델을 선택합니다.</p></div></div>
           <div class="callout danger"><b>모델 변경 순서:</b> 대시보드에서 <b>AI 끄기</b> → 모델 변경 및 설정 저장 → 대시보드에서 <b>AI 다시 켜기</b> 순서로 진행합니다. AI가 실행 중인 상태에서는 모델을 변경하지 마세요.</div>
+          <div class="cards two">
+            <div class="card"><span class="tag green">LOCAL AI</span><b>LM Studio 로컬 모델</b><p>문서·대화·답변을 PC 안에서 처리합니다. 기존 Qwen·Gemma·직접 지정 GGUF와 ROCm/Vulkan 설정을 그대로 사용할 수 있습니다.</p></div>
+            <div class="card"><span class="tag">CLOUD API</span><b>외부 클라우드 모델을 Hermes에 연결</b><p>현재는 OpenAI API를 지원합니다. API 키를 등록하고 모델 목록을 불러온 뒤 연결 확인과 저장을 누르면 다음 AI 켜기부터 선택한 클라우드 모델을 사용합니다.</p></div>
+          </div>
+          <ol class="steps" style="margin-top:16px">
+            <li><strong>Cloud API</strong>를 선택하고 현재 공급자인 OpenAI의 API 키를 입력합니다. 키는 현재 Windows 사용자만 복호화할 수 있게 암호화 저장되며 Hermes 설정 파일에는 평문으로 기록하지 않습니다.</li>
+            <li><strong>모델 불러오기</strong>에서 계정이 사용할 수 있는 클라우드 모델을 선택하고 <strong>연결 확인</strong>으로 실제 짧은 응답을 테스트합니다.</li>
+            <li><strong>설정 저장</strong> 후 대시보드에서 AI를 다시 켭니다. 이때 LM Studio 언어모델은 올리지 않고 Hermes Desktop과 설정된 메신저를 Cloud API에 연결합니다.</li>
+            <li>로컬 방식으로 돌아가려면 <strong>로컬 AI</strong>를 선택하고 기존 모델 설정을 저장한 뒤 AI를 다시 켭니다.</li>
+          </ol>
+          <div class="callout warning"><b>데이터·비용 안내:</b> Cloud API 모드에서는 대화 내용과 RAG가 찾은 문서 근거 일부가 선택한 외부 공급자로 전송됩니다. 현재 공급자는 OpenAI이며 API 사용료가 별도로 발생할 수 있습니다. API 키를 메신저나 대화창에 붙여 넣지 마세요.</div>
+          <div class="callout"><b>언어 전환:</b> 왼쪽 아래의 <b>한국어 / English</b>를 누르면 현재 화면 전체가 즉시 전환됩니다. 저장한 언어와 Cloud API 설정은 앱을 다시 열어도 유지됩니다.</div>
           <figure class="shot app-shot"><img src="guide-assets/07-model-management-current.png" alt="AI One-touch v3.6 실제 모델 관리 화면" data-zoom><figcaption>실제 v3.6 모델 관리 화면입니다. 화면 캡처에는 AI가 실행 중으로 표시되어 있지만, 모델을 변경할 때는 반드시 먼저 AI를 끄세요.</figcaption></figure>
           <ol class="steps" style="margin-top:16px">
             <li>모델을 바꾸기 전에 대시보드에서 <strong>AI 끄기</strong>를 누르고 모델 서버와 Hermes가 완전히 종료될 때까지 기다립니다.</li>
@@ -329,10 +343,10 @@
           <figure class="shot app-shot"><img src="guide-assets/08-rag-current.png" alt="AI One-touch v3.6 실제 문서 기반 RAG 화면" data-zoom><figcaption>실제 v3.6 문서 기반 RAG 화면입니다. 점선 영역에 문서를 끌어다 놓거나 파일 추가 버튼으로 선택합니다.</figcaption></figure>
           <div class="cards">
             <div class="card"><span class="tag green">FILES</span><b>한 번에 최대 20개</b><p>파일당 50MB, 한 번에 총 200MB까지 등록할 수 있습니다.</p></div>
-            <div class="card"><span class="tag">LOCAL</span><b>PC 내부에서 처리</b><p>문서, 청크와 임베딩은 이 PC의 RAG 저장소에 보관됩니다.</p></div>
+            <div class="card"><span class="tag">LOCAL / HYBRID</span><b>실행 방식에 맞춘 처리</b><p>문서, 청크와 임베딩은 PC에 보관됩니다. 로컬 AI는 답변도 PC 안에서 만들고, Cloud API는 검색된 근거 일부와 질문만 외부 공급자로 전송해 답변을 만듭니다.</p></div>
             <div class="card"><span class="tag">COMMAND</span><b>/rag로 질문</b><p>일반 대화와 구분하려면 문서 질문 앞에 /rag를 붙입니다.</p></div>
           </div>
-          <div class="callout"><b>v3.6.63 RAG:</b> Qwen3-Embedding-0.6B로 자연어 질문과 가까운 문서 청크를 찾고, 검색된 문서의 업무 규칙과 절차를 적용해 한 번의 답변 생성으로 결과를 만듭니다. 견적, 계약, 재고, 보고서 등 특정 업무 유형에 고정되지 않습니다.</div>
+          <div class="callout"><b>지원 문서와 검색 방식:</b> PDF·Word·Excel·PowerPoint·CSV·TXT·Markdown·JSON을 등록할 수 있습니다. Qwen3-Embedding-0.6B가 자연어 질문과 가까운 문서 청크를 찾아 견적, 계약, 재고, 보고서 등 업무 종류에 고정되지 않은 답변을 만듭니다.</div>
           <div class="commands">
             <div class="command"><code>/rag 원장에서 R9700의 현재 대여 현황을 알려줘</code><span>제품명과 질문 범위를 구체적으로 적습니다.</span></div>
             <div class="command"><code>/RAG 계약서별 납기일과 담당자를 표로 정리해줘</code><span>대문자 /RAG도 동일하게 작동합니다.</span></div>
@@ -351,12 +365,14 @@
         <section class="content-section" id="recovery">
           <div class="section-head"><span class="section-num">08</span><div><h2>문제 발생 시 복구</h2><p>재실행 → 재설치 → 초기화 순서로 진행합니다.</p></div></div>
           <div class="recovery-grid">
-            <article><h3>바로가기로 앱이 안 열림</h3><p>열려 있는 런처 창과 브라우저 탭을 닫고 다시 실행합니다. 계속 안 열리면 Windows를 재부팅한 뒤 최신 ZIP 설치 BAT을 관리자 권한으로 다시 실행합니다.</p></article>
+            <article><h3>바로가기로 앱이 안 열림</h3><p>이미 실행 중인 창이 작업 표시줄에 있는지 먼저 확인합니다. 없다면 바로가기를 다시 실행하고, 계속 안 열릴 때만 최신 ZIP 설치 BAT을 관리자 권한으로 다시 실행합니다.</p></article>
             <article><h3>런처가 두 개 열림</h3><p>기존 창을 먼저 닫고 바탕화면 바로가기를 한 번만 실행합니다. 최신 설치본은 이미 실행 중인 런처 창을 재사용합니다.</p></article>
             <article><h3>모델 다운로드가 멈춤</h3><p>VPN을 끄고 LM Studio 다운로드 상태를 확인합니다. 중단 작업이 정리된 후 목록 새로고침 → 모델 재선택 → 다운로드 순으로 시도합니다.</p></article>
             <article><h3>AI 켜기 후 응답이 없음</h3><p>대시보드의 진행 로그에서 모델 로드와 Hermes 시작 여부를 확인합니다. AI를 끄고 VRAM이 해제된 뒤 다시 켭니다.</p></article>
             <article><h3>Telegram·Slack이 응답하지 않음</h3><p>Token과 허용 ID를 저장했는지, AI가 켜져 있는지 확인합니다. Slack은 Socket Mode 상태도 함께 확인합니다.</p></article>
             <article><h3>문서 RAG가 답하지 않음</h3><p>문서 수가 1개 이상인지, 등록 처리가 끝났는지, 질문 앞에 /rag를 붙였는지 확인합니다.</p></article>
+            <article><h3>언어가 섞이거나 화면이 잠깐 바뀜</h3><p>왼쪽 아래 버전이 v3.6.77인지 확인하고 기존 런처 창을 완전히 닫은 뒤 다시 실행합니다. 이전 버전 화면이 남아 있다면 최신 배포본을 재설치합니다.</p></article>
+            <article><h3>Cloud API 연결 오류</h3><p>API 키와 선택 모델을 확인하고 연결 확인 → 설정 저장 순서로 다시 저장합니다. 그다음 AI를 껐다가 다시 켜 Hermes 연결을 새 설정으로 시작합니다.</p></article>
             <article><h3>LM Studio 실행 시간 초과</h3><p>LM Studio를 직접 한 번 열어 초기 화면이 표시되는지 확인한 뒤 종료하고 런처에서 AI 켜기를 다시 누릅니다.</p></article>
             <article><h3>런처 환경 초기화</h3><p><b>Reset_Tool.exe</b>의 <b>런처 초기화</b> 탭을 실행하고 설치 BAT을 다시 실행합니다. 실행 중인 런처와 LM Studio를 정리한 뒤 재설치하며, 내려받은 언어모델은 유지됩니다.</p></article>
           </div>
@@ -366,7 +382,7 @@
         </section>
       </main>
 
-      <footer><b>AI One-touch Internal v3.6.63</b> · 이 가이드는 인터넷 없이 열 수 있으며 브라우저 인쇄 메뉴에서 PDF로 저장할 수 있습니다.</footer>
+      <footer><b>AI One-touch Internal v3.6.77</b> · 이 가이드는 인터넷 없이 열 수 있으며 브라우저 인쇄 메뉴에서 PDF로 저장할 수 있습니다.</footer>
     </div>
   </div>
 
