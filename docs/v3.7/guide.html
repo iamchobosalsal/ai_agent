@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI One-touch v3.7.29 왕초보 사용가이드</title>
+<title>AI One-touch v3.7.31 왕초보 사용가이드</title>
   <style>
     :root{--ink:#18251d;--sub:#5e6b61;--line:#26372d;--paper:#f4f0d6;--panel:#d7d4b8;--green:#4cae58;--green-dark:#24582e;--brown:#a56e3b;--red:#a96157;--sky:#bfe8f7;--shadow:#283229}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(#bfeafa 0 48%,#79bc5d 48% 53%,#80563c 53%);background-attachment:fixed;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.65}
@@ -12,7 +12,7 @@
     @media print{body{background:#fff}.page{width:100%;margin:0;border:0;box-shadow:none}.quick-nav,.lightbox{display:none!important}.step{break-inside:avoid;box-shadow:none}.shot{box-shadow:none}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
   </style>
   <style>
-/* v3.7.29: 런처의 차분한 흰색·초록색 화면과 같은 사용가이드 테마 */
+/* v3.7.31: 런처의 차분한 흰색·초록색 화면과 같은 사용가이드 테마 */
     :root{--ink:#202522;--sub:#6f7771;--line:#d8d7d1;--paper:#fff;--panel:#f4f4f1;--green:#259260;--green-dark:#126b46;--brown:#eceeea;--red:#bd4e59;--sky:#f1f2ef;--shadow:rgba(32,45,38,.10)}
     body{color:var(--ink);background:#f1f2ef;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.68}
     .page{width:min(1160px,calc(100% - 28px));margin:24px auto 56px;background:#fff;border:1px solid #d8d7d1;border-radius:24px;box-shadow:0 18px 48px rgba(32,45,38,.10);overflow:hidden}
@@ -32,7 +32,7 @@
   <div class="page">
     <header class="hero">
       <div class="brand"><div class="logo">AI</div><div><h1>AI One-touch 왕초보 사용가이드</h1><p>설치부터 AI 실행, 메신저 연결, 문서 RAG 사용까지 한 번에 따라 하기</p></div></div>
-<span class="version">초보자용 · v3.7.29</span>
+<span class="version">초보자용 · v3.7.31</span>
     </header>
     <nav class="quick-nav" aria-label="빠른 이동">
       <a href="#install">1. 설치·실행</a><a href="#power">2. AI 켜기</a><a href="#messenger">3. 메신저</a><a href="#documents">4. 문서 등록</a><a href="#rag">5. /rag 사용</a><a href="#help">6. 문제 해결</a>
@@ -53,10 +53,10 @@
           <div class="file"><span>APP</span><div><b>시작 메뉴 → AI One-touch Beginner</b><small>바탕화면 아이콘이 보이지 않을 때 사용할 수 있는 실행 방법입니다.</small></div></div>
           <div class="file"><span>GO</span><div><b>AI PC 준비 시작</b><small>처음 실행한 PC에서는 이 버튼을 한 번 누릅니다. LM Studio, 모델, Hermes와 기본 도구를 순서대로 준비합니다.</small></div></div>
         </div>
-<div class="shot"><img src="guide-assets/00-install.png" alt="AI One-touch v3.7.29 처음 설치하기 화면" data-zoom><p class="caption">처음 실행하면 AI PC 준비 화면이 나타납니다. 초록색 <b>AI PC 준비 시작</b>을 한 번 누르면 됩니다.</p></div>
+<div class="shot"><img src="guide-assets/00-install.png" alt="AI One-touch v3.7.31 처음 설치하기 화면" data-zoom><p class="caption">처음 실행하면 AI PC 준비 화면이 나타납니다. 초록색 <b>AI PC 준비 시작</b>을 한 번 누르면 됩니다.</p></div>
         <div class="tip"><b>이미 설치했던 PC:</b> 새 배포본의 설치 BAT을 다시 실행하면 앱은 업데이트되고 바탕화면 바로가기도 자동으로 생성됩니다. 제거 BAT을 실행하면 바로가기도 함께 삭제됩니다.</div>
         <div class="tip warn"><b>첫 설치는 오래 걸릴 수 있습니다.</b> 모델 크기가 약 16~22GB이므로 인터넷 속도에 따라 수십 분 이상 걸릴 수 있습니다. 진행 중에는 창을 닫지 마세요.</div>
-<div class="shot"><img src="guide-assets/06-model-download.png" alt="AI One-touch v3.7.29 언어모델 다운로드 진행 화면" data-zoom><p class="caption"><b>언어모델 다운로드 중</b>, 내려받은 용량·전체 용량·속도·남은 시간·마지막 상태 확인 시간이 표시됩니다. 줄무늬 진행 막대가 움직이고 상태 확인 시간이 갱신되면 멈춘 것이 아닙니다.</p></div>
+<div class="shot"><img src="guide-assets/06-model-download.png" alt="AI One-touch v3.7.31 언어모델 다운로드 진행 화면" data-zoom><p class="caption"><b>언어모델 다운로드 중</b>, 내려받은 용량·전체 용량·속도·남은 시간·마지막 상태 확인 시간이 표시됩니다. 줄무늬 진행 막대가 움직이고 상태 확인 시간이 갱신되면 멈춘 것이 아닙니다.</p></div>
         <div class="tip"><b>다운로드가 정상인지 확인하는 법:</b> 화면에 <b>정상 진행 중</b> 또는 퍼센트가 보이고 <b>상태 확인 시간</b>이 계속 바뀌면 정상입니다. 오류 문구가 나오지 않았다면 모델이 큰 것이므로 기다려 주세요.</div>
       </section>
 
@@ -64,7 +64,7 @@
         <span class="step-number">STEP 02</span>
         <h2>메인 화면에서 AI 켜기</h2>
         <p class="step-lead">설치가 끝나면 아래와 같은 전원 화면이 표시됩니다. 초록색 <b>AI 켜기</b> 버튼을 누르세요.</p>
-<div class="shot"><img src="guide-assets/01-home.png" alt="AI One-touch v3.7.29 메인 전원 화면" data-zoom><p class="caption">① 초록색 AI 켜기 · ② 메신저 연결 · ③ 문서 등록</p></div>
+<div class="shot"><img src="guide-assets/01-home.png" alt="AI One-touch v3.7.31 메인 전원 화면" data-zoom><p class="caption">① 초록색 AI 켜기 · ② 메신저 연결 · ③ 문서 등록</p></div>
         <div class="actions"><div class="action"><b>AI 켜기</b>모델 서버와 Hermes를 실행합니다.</div><div class="action"><b>AI 끄기</b>모델 서버와 메신저 Gateway를 종료합니다.</div><div class="action"><b>뒤로가기</b>메신저·문서 화면에서 마우스 뒤로가기 버튼도 사용할 수 있습니다.</div></div>
         <h3>실행할 모델 선택</h3>
 <p>AI 켜기를 누르면 PC의 GPU 메모리에 맞는 두 모델이 표시됩니다. <b>16GB GPU</b>에서는 빠른 응답용 <b>Gemma 4 12B</b>와 답변 품질 우선 <b>Gemma 4 26B A4B IT QAT</b> 중에서 고를 수 있습니다. <b>32GB급 GPU</b>에서는 빠른 응답용 <b>Qwen 3.6 35B-A3B</b>와 답변 품질 우선 <b>Qwen 3.8 27B</b> 중에서 고를 수 있습니다.</p>
@@ -76,10 +76,9 @@
       <section class="step" id="messenger">
         <span class="step-number">STEP 03</span>
         <h2>메신저 연결</h2>
-        <p class="step-lead">메인 화면의 <b>메신저 연결</b>을 누르면 공용 Telegram 봇 또는 개인별 봇을 등록할 수 있습니다.</p>
-        <div class="shot"><img src="guide-assets/03-messenger.png" alt="Telegram 메신저 연결 설정 화면" data-zoom><p class="caption">공용 봇은 Bot Token 1개와 여러 Chat ID, 개인별 봇은 사용자마다 별도 Token과 Chat ID를 사용합니다.</p></div>
-        <ol class="checklist"><li>BotFather에서 발급받은 Bot Token을 입력합니다.</li><li>허용할 Telegram Chat ID를 입력합니다.</li><li><b>설정 저장</b> 또는 <b>저장하고 연결</b>을 누릅니다.</li><li>AI를 켜면 Telegram Gateway도 함께 시작됩니다.</li></ol>
-        <h3>Bot Token과 사용자 ID 확인하기</h3>
+        <p class="step-lead">메인 화면의 <b>메신저 연결</b>을 누르면 Telegram, Discord 또는 Slack을 선택해 연결할 수 있습니다.</p>
+        <div class="shot"><img src="guide-assets/03-messenger.png" alt="메신저 연결 설정 화면" data-zoom><p class="caption">위쪽에서 메신저를 선택하고 각 서비스의 Bot Token과 허용 사용자 정보를 저장합니다.</p></div>
+        <h3>Telegram Bot Token과 사용자 ID 확인하기</h3>
         <ol class="checklist">
           <li>Telegram 검색창에서 인증 표시가 있는 <b>BotFather</b>를 열고 <span class="kbd">/newbot</span>을 입력합니다.</li>
           <li>봇 이름을 정한 뒤, 마지막이 <span class="kbd">_bot</span>으로 끝나는 사용자 이름을 입력합니다. 발급된 <b>HTTP API Token</b>이 런처의 Bot Token입니다.</li>
@@ -89,6 +88,21 @@
         <div class="shot"><img src="guide-assets/05-telegram-help.png" alt="Telegram BotFather 토큰 발급과 사용자 ID 확인 예시" data-zoom><p class="caption">왼쪽: BotFather의 Bot Token 발급 위치 · 오른쪽: 사용자 ID 확인 봇의 숫자 Id 위치</p></div>
         <div class="tip warn"><b>중요:</b> Bot Token은 비밀번호와 같습니다. 다른 사람에게 보내거나 공개 게시물에 올리지 마세요. ID 확인 봇에는 개인 문서나 민감한 메시지를 전달하지 말고 <code>/start</code>만 사용하세요. 그룹 Chat ID는 개인 사용자 ID와 다릅니다.</div>
         <div class="tip">저장된 Bot Token은 화면에 다시 표시되지 않으며 현재 Windows 사용자만 복호화할 수 있도록 암호화해 저장합니다.</div>
+        <h3 style="margin-top:28px">Discord를 처음부터 연결하기</h3>
+        <ol class="checklist">
+          <li><b>서버 만들기:</b> Discord 왼쪽의 <b>+</b> 버튼 → <b>직접 만들기</b>를 눌러 봇을 사용할 서버를 만듭니다. 이미 서버가 있으면 건너뜁니다.</li>
+          <li><b>봇 만들기:</b> 런처에서 Discord를 선택하고 <b>Discord Bot 설정 열기</b>를 누릅니다. Developer Portal에서 <b>New Application</b> → 이름 입력 → 왼쪽 <b>Bot</b> → <b>Add Bot</b> 순서로 진행합니다.</li>
+          <li><b>Bot Token 넣기:</b> Bot 화면의 <b>Reset Token</b> 또는 <b>Copy</b>로 발급한 문자열을 런처의 <b>Bot Token</b>에 붙여 넣습니다. <b>Client ID나 Application ID가 아닙니다.</b></li>
+          <li><b>메시지 읽기 허용:</b> 같은 Bot 화면 아래의 <b>Privileged Gateway Intents</b>에서 <b>Message Content Intent</b>를 켜고 저장합니다.</li>
+          <li><b>내 사용자 ID 찾기:</b> Discord 사용자 설정(톱니바퀴) → <b>고급</b> → <b>개발자 모드</b>를 켭니다. 내 프로필을 오른쪽 클릭해 <b>사용자 ID 복사</b>를 누릅니다.</li>
+          <li><b>런처에 허용 사용자 등록:</b> 복사한 숫자를 <b>허용 사용자 ID</b>에 넣습니다. 역할 ID, 채널 ID, 기본 알림 채널 ID는 특정 범위로 제한하거나 알림을 보낼 때만 쓰므로 처음에는 비워도 됩니다.</li>
+          <li><b>봇을 서버에 초대:</b> Developer Portal의 <b>OAuth2 → URL Generator</b>에서 <b>bot</b>, <b>applications.commands</b>를 체크합니다. 권한은 <b>View Channels, Send Messages, Read Message History, Attach Files</b>를 선택합니다.</li>
+          <li>아래에 생성된 주소를 열고 방금 만든 서버를 선택한 뒤 승인합니다. Discord 서버의 멤버 목록에 봇 이름이 보이면 초대가 끝난 것입니다.</li>
+          <li><b>연결하고 켜기:</b> 런처에서 <b>설정 저장</b> → <b>저장하고 연결</b>을 누른 뒤 메인 화면에서 <b>AI 켜기</b>를 누릅니다. 서버의 봇이 온라인으로 표시될 때까지 기다립니다.</li>
+          <li><b>질문하기:</b> 서버 채널에서 <b>@봇이름 안녕</b>처럼 봇을 멘션합니다. <b>서버 채널에서 멘션할 때만 답변</b>을 끄면 허용된 채널의 일반 메시지에도 반응합니다. DM은 멘션 없이 사용할 수 있습니다.</li>
+        </ol>
+        <div class="tip warn"><b>Bot Token은 비밀번호입니다.</b> 화면 캡처, 채팅, 문서, GitHub에 올리지 마세요. 노출했다면 Developer Portal의 Bot 화면에서 즉시 <b>Reset Token</b>을 누르고 새 토큰을 런처에 저장하세요.</div>
+        <div class="tip"><b>연결 실패:</b> <b>PrivilegedIntentsRequired</b>가 보이면 Message Content Intent를 켭니다. 봇이 서버에 없으면 OAuth2 URL Generator로 초대합니다. 봇이 오프라인이면 런처 연결과 AI 켜기를 확인합니다. 온라인인데 답이 없으면 @봇이름 멘션과 허용 사용자 ID를 확인합니다.</div>
       </section>
 
       <section class="step" id="documents">
@@ -102,8 +116,8 @@
 
       <section class="step" id="rag">
         <span class="step-number">STEP 05</span>
-        <h2>Telegram 또는 Hermes에서 문서 질문</h2>
-        <p class="step-lead">문서 등록이 끝난 뒤 Telegram이나 Hermes Desktop 대화창에서 아래처럼 입력합니다. 대문자와 소문자를 모두 지원합니다.</p>
+        <h2>메신저 또는 Hermes에서 문서 질문</h2>
+        <p class="step-lead">문서 등록이 끝난 뒤 Telegram, Discord, Slack 또는 Hermes Desktop 대화창에서 아래처럼 입력합니다. 대문자와 소문자를 모두 지원합니다.</p>
         <div class="command-grid">
           <div class="command"><code>/rag 원장에서 R9700 대여 현황을 알려줘</code><span>등록된 문서에서 관련 근거를 찾아 답합니다.</span></div>
           <div class="command"><code>/RAG 계약서의 납기일과 위약금을 표로 정리해줘</code><span>/RAG처럼 대문자로 입력해도 동일하게 작동합니다.</span></div>
@@ -119,13 +133,13 @@
         <div class="support">
           <article><h3>앱이 열리지 않음</h3><p>Windows를 재부팅하고 바탕화면 바로가기로 다시 실행합니다. 계속 안 열리면 새 ZIP을 새 폴더에 완전히 푼 뒤 <b>설치 BAT</b>을 관리자 권한으로 다시 실행하세요.</p></article>
           <article><h3>모델 다운로드가 느림</h3><p>파일이 16~22GB로 큽니다. 진행 막대가 움직이거나 상태 확인 시간이 갱신되면 정상입니다. VPN을 끄고 유선 인터넷을 권장하며, 중단 후 다시 실행하면 이어받기를 시도합니다.</p></article>
-          <article><h3>/rag 답변이 없음</h3><p>AI가 켜져 있는지, 문서 수가 1개 이상인지, 질문 앞에 <span class="kbd">/rag</span>를 붙였는지 확인합니다.</p></article>
+          <article><h3>/rag 답변이 없음</h3><p>AI가 켜져 있는지, 문서 수가 1개 이상인지, 질문 앞에 <span class="kbd">/rag</span>를 붙였는지 확인합니다. Discord 서버에서는 @봇이름 멘션도 확인합니다.</p></article>
           <article><h3>새 PC처럼 다시 시작</h3><p>위 방법으로 해결되지 않으면 <b>Reset_Tool_LMStudio.exe</b>로 초기화한 뒤 설치 BAT을 다시 실행합니다. 더 이상 사용하지 않을 때만 <b>제거 BAT</b>을 실행하세요.</p></article>
         </div>
         <div class="tip">위 순서대로 재시도·재설치·초기화를 진행하면 사용자가 직접 복구할 수 있습니다.</div>
       </section>
     </main>
-<footer class="footer"><b>AI One-touch Beginner v3.7.29</b> · 이 문서는 인터넷 연결 없이 열 수 있습니다. · 화면 이미지를 누르면 크게 볼 수 있습니다.</footer>
+<footer class="footer"><b>AI One-touch Beginner v3.7.31</b> · 이 문서는 인터넷 연결 없이 열 수 있습니다. · 화면 이미지를 누르면 크게 볼 수 있습니다.</footer>
   </div>
   <div class="lightbox" id="lightbox" role="dialog" aria-label="화면 이미지 크게 보기"><img id="lightboxImage" alt="확대 화면"></div>
   <script>

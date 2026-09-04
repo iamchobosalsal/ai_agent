@@ -1,5 +1,21 @@
 # 변경 내역
 
+## v3.7.31
+
+- Telegram·Discord·Slack 메신저 선택 지원
+- Discord Bot Token과 허용 사용자 ID를 Windows 사용자별로 암호화 저장
+- Discord 서버 멘션·DM 처리와 허용 사용자·역할·채널 제한 지원
+- 서버 생성, Bot Token, Message Content Intent, 사용자 ID, OAuth2 봇 초대와 실제 사용을 설명하는 왕초보 가이드 추가
+- v3.7 전체 자동 검사 32개와 내부 서명 MSIX 검증 통과
+
+## v3.6.81
+
+- Discord Bot 연결과 서버 멘션·DM 처리 지원
+- Discord Bot Token과 허용 사용자 ID를 Windows 사용자별로 암호화 저장
+- 서버 생성부터 Bot 초대와 문제 해결까지 설명하는 초보자용 전체 가이드 추가
+- Cloud API·Hermes 통합 검사가 특정 과거 버전에만 고정되지 않도록 회귀 검사 개선
+- v3.6 전체 자동 검사 44개와 내부 서명 MSIX 검증 통과
+
 ## v3.6.79
 
 - Hermes 스킬 설치기가 `SKILL.md`, `instruction.md`, `README.md`를 함께 분석하도록 개선

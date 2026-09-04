@@ -2,11 +2,11 @@
 
 > AMD 시스템에서 로컬 언어모델 또는 Cloud API와 AI Agent 환경을 쉽게 설치하고 관리하기 위한 Windows 런처입니다.
 
-AI One-touch는 **LM Studio 기반 로컬 LLM 또는 Cloud API**, **Hermes Agent**, **Telegram·Slack 메신저 연동**, **웹 검색**, **문서 기반 RAG**를 하나의 화면에서 준비하고 실행할 수 있도록 도와줍니다.
+AI One-touch는 **LM Studio 기반 로컬 LLM 또는 Cloud API**, **Hermes Agent**, **Telegram·Discord·Slack 메신저 연동**, **웹 검색**, **문서 기반 RAG**를 하나의 화면에서 준비하고 실행할 수 있도록 도와줍니다.
 
 복잡한 명령어 입력 없이 그래픽카드를 확인하고, PC의 VRAM에 맞는 모델과 실행 설정을 선택할 수 있도록 구성했습니다.
 
-> 이 프로젝트는 LM Studio, Element Labs, Nous Research, AMD, Telegram, Slack 또는 각 언어모델 제공자의 공식 제품이나 공식 배포판이 아닙니다.
+> 이 프로젝트는 LM Studio, Element Labs, Nous Research, AMD, Telegram, Discord, Slack 또는 각 언어모델 제공자의 공식 제품이나 공식 배포판이 아닙니다.
 
 ## 다운로드
 
@@ -14,15 +14,15 @@ AI One-touch는 **LM Studio 기반 로컬 LLM 또는 Cloud API**, **Hermes Agent
 
 1. 내려받은 `ai_agent-main.zip`의 압축을 해제합니다.
 2. 압축을 푼 폴더의 `downloads`로 들어갑니다.
-3. 처음 설치한다면 `v3.7.29`, 기존 대시보드와 상세 관리 기능을 사용하려면 `v3.6.79` 폴더를 엽니다.
+3. 처음 설치한다면 `v3.7.31`, 기존 대시보드와 상세 관리 기능을 사용하려면 `v3.6.81` 폴더를 엽니다.
 4. 폴더 안의 `README_KO.txt`를 확인한 뒤 `1_Install_...bat` 파일을 **관리자 권한으로 실행**합니다.
 
 > 두 설치본은 자체서명 MSIX입니다. 설치 배치파일이 함께 제공된 공개 인증서를 등록하므로 Windows 관리자 권한이 필요합니다. 인증서 지문은 각 폴더의 `package-info.json`에서 확인할 수 있으며 개인키는 포함되어 있지 않습니다.
 
 | 버전 | 권장 대상 | 특징 |
 |---|---|---|
-| **v3.7.29** | 처음 설치하는 사용자 | 초보자용 UI, GPU 교체 자동 감지, 16GB GPU용 Gemma 4 선택지 |
-| **v3.6.79** | 기존 화면과 상세 관리 기능을 선호하는 사용자 | 대시보드 중심 UI, Cloud API, Qwen3 Embedding 기반 RAG, Hermes 스킬의 로컬 실행 도구 자동 설치·복구 |
+| **v3.7.31** | 처음 설치하는 사용자 | 초보자용 UI, GPU 교체 자동 감지, 16GB GPU용 Gemma 4 선택지, Discord 연동 |
+| **v3.6.81** | 기존 화면과 상세 관리 기능을 선호하는 사용자 | 대시보드 중심 UI, Cloud API, Qwen3 Embedding 기반 RAG, Discord 연동, Hermes 스킬의 로컬 실행 도구 자동 설치·복구 |
 
 처음 사용하는 경우 **v3.7**을 권장합니다.
 
@@ -34,7 +34,7 @@ AI One-touch는 **LM Studio 기반 로컬 LLM 또는 Cloud API**, **Hermes Agent
 - KV 캐시 8비트(Q8) 기본 설정
 - LM Studio 설치와 로컬 모델 서버 실행
 - Hermes Agent 자동 설치 및 로컬 LLM 연결
-- Telegram·Slack 메신저 연동
+- Telegram·Discord·Slack 메신저 연동
 - 웹 검색 도구와 문서 도구 설치
 - PDF·Word·Excel·PowerPoint·CSV·TXT·Markdown·JSON 문서 등록
 - 로컬 문서 기반 RAG 검색
@@ -73,7 +73,7 @@ GPU와 VRAM이 부족하면 모델 실행 속도가 느려지거나 로딩에 �
 
 1. 저장소의 **Code → Download ZIP**으로 전체 파일을 내려받습니다.
 2. `ai_agent-main.zip`의 압축을 완전히 해제합니다. 압축 파일 내부에서 설치 BAT을 바로 실행하지 마세요.
-3. `downloads/v3.7.29` 또는 `downloads/v3.6.79` 폴더를 엽니다.
+3. `downloads/v3.7.31` 또는 `downloads/v3.6.81` 폴더를 엽니다.
 4. `1_Install_...bat` 파일을 우클릭하여 **관리자 권한으로 실행**합니다.
 5. 설치가 끝나면 바탕화면 또는 시작 메뉴에서 AI One-touch를 실행합니다.
 6. 런처를 열고 사용할 모델과 실행 방식을 확인합니다.
@@ -82,6 +82,7 @@ GPU와 VRAM이 부족하면 모델 실행 속도가 느려지거나 로딩에 �
 
 - [v3.7 설치·사용 가이드](docs/v3.7/guide.html)
 - [v3.6 설치·사용 가이드](docs/v3.6/guide.html)
+- [Discord 연결 가이드 — 처음 사용하는 사람용](docs/DISCORD_SETUP_KO.md)
 
 ### 언어모델 다운로드가 오래 걸릴 때
 
@@ -115,7 +116,7 @@ AI가 실행 중인 상태에서 모델만 변경하면 이전 모델이 메모�
 
 ### GPU를 교체한 경우
 
-v3.7.29는 마지막 실행 때의 GPU 이름·VRAM·권장 등급과 현재 하드웨어를 비교합니다. GPU가 바뀌거나 VRAM 차이가 크면 예전 PC에서 저장된 모델을 계속 사용하지 않고 현재 GPU에 맞는 모델을 다시 선택할 수 있게 안내합니다.
+v3.7.31은 마지막 실행 때의 GPU 이름·VRAM·권장 등급과 현재 하드웨어를 비교합니다. GPU가 바뀌거나 VRAM 차이가 크면 예전 PC에서 저장된 모델을 계속 사용하지 않고 현재 GPU에 맞는 모델을 다시 선택할 수 있게 안내합니다.
 
 - 16GB급 GPU: `Gemma 4 12B` 또는 `Gemma 4 26B A4B IT QAT` 선택
 - 32GB급 GPU: `Qwen 3.6 35B-A3B` 권장
@@ -140,7 +141,7 @@ GPU 교체 전에 내려받은 모델 파일은 자동으로 삭제하지 않습
 
 PDF, Word, Excel, PowerPoint, CSV, TXT, Markdown, JSON 문서를 런처에 등록하여 로컬 지식베이스로 사용할 수 있습니다.
 
-등록한 문서는 사용자의 PC 안에서 청크와 임베딩으로 처리됩니다. v3.6.79는 Qwen3-Embedding-0.6B를 사용하며, 질문을 특정 업무 유형으로 고정하지 않고 자연어 그대로 검색한 뒤 관련 문서와 작업 규칙을 적용해 답변합니다. 일반 대화와 문서 질문을 구분하려면 질문 앞에 `/rag`를 붙일 수 있습니다.
+등록한 문서는 사용자의 PC 안에서 청크와 임베딩으로 처리됩니다. v3.6.81은 Qwen3-Embedding-0.6B를 사용하며, 질문을 특정 업무 유형으로 고정하지 않고 자연어 그대로 검색한 뒤 관련 문서와 작업 규칙을 적용해 답변합니다. 일반 대화와 문서 질문을 구분하려면 질문 앞에 `/rag`를 붙일 수 있습니다.
 
 Hermes 스킬 설치기는 `SKILL.md`뿐 아니라 `instruction.md`와 `README.md`도 함께 분석해 실제 실행 도구를 준비합니다. 올리브영 재고 검색 스킬은 고정된 로컬 CLI를 사용하며 `npx`, 브라우저 원격 디버깅 또는 `curl`로 우회하지 않습니다. 이전 버전에서 문서 전용으로 잘못 설치된 스킬도 다시 설치하면 자동으로 복구됩니다.
 
@@ -152,11 +153,14 @@ Hermes 스킬 설치기는 `SKILL.md`뿐 아니라 `instruction.md`와 `README.m
 
 ## 메신저 연동
 
-Hermes Agent Gateway를 이용하여 Telegram 또는 Slack에서 로컬 AI와 대화할 수 있습니다.
+Hermes Agent Gateway를 이용하여 Telegram, Discord 또는 Slack에서 AI와 대화할 수 있습니다.
 
 - Telegram: Bot Token과 허용할 Chat ID 필요
+- Discord: Bot Token과 허용 사용자 ID 필요. 서버 채널에서는 기본적으로 봇 멘션 사용
 - Slack: App Token, Bot Token과 허용 사용자 설정 필요
 - 외부에서 들어오는 요청은 반드시 허용 목록을 설정하여 제한할 것을 권장
+
+Discord를 처음 설정한다면 [초보자용 Discord 연결 가이드](docs/DISCORD_SETUP_KO.md)를 순서대로 따라 하세요.
 
 토큰과 개인 설정 파일은 GitHub나 다른 공개 장소에 업로드하지 마세요.
 
@@ -177,7 +181,7 @@ Hermes Agent Gateway를 이용하여 Telegram 또는 Slack에서 로컬 AI와 �
 
 - LM Studio, Hermes Agent와 언어모델 다운로드
 - 웹 검색과 URL 내용 확인
-- Telegram·Slack 메시지 송수신
+- Telegram·Discord·Slack 메시지 송수신
 - 사용자가 별도로 연결한 외부 API 및 스킬
 
 외부 서비스에는 각 서비스의 개인정보 처리방침과 이용약관이 적용됩니다.
@@ -190,11 +194,11 @@ Hermes Agent Gateway를 이용하여 Telegram 또는 Slack에서 로컬 AI와 �
 
 ## Third-Party Software Notice
 
-본 런처는 LM Studio, Hermes Agent, 제3자 LLM 모델, Telegram·Slack 등 제3자가 제공하는 소프트웨어, 오픈소스 구성 요소, 모델 및 서비스를 쉽게 설치하고 연동할 수 있도록 지원하는 독립적인 도구입니다.
+본 런처는 LM Studio, Hermes Agent, 제3자 LLM 모델, Telegram·Discord·Slack 등 제3자가 제공하는 소프트웨어, 오픈소스 구성 요소, 모델 및 서비스를 쉽게 설치하고 연동할 수 있도록 지원하는 독립적인 도구입니다.
 
 LM Studio 데스크톱 앱과 언어모델 파일은 본 저장소에 포함하거나 재배포하지 않으며, 사용자의 PC에서 각 제공자가 안내하는 공식 배포 경로를 통해 내려받습니다. 각 구성 요소의 사용, 수정, 상업적 이용 및 재배포에는 해당 제공자의 라이선스와 이용 조건이 적용됩니다.
 
-본 프로젝트는 LM Studio, Element Labs, Nous Research, AMD, Telegram, Slack 또는 각 언어모델 제공자의 공식 제품이나 공식 배포판이 아니며, 별도의 명시가 없는 한 해당 업체 및 프로젝트와의 제휴·보증·승인·후원을 의미하지 않습니다.
+본 프로젝트는 LM Studio, Element Labs, Nous Research, AMD, Telegram, Discord, Slack 또는 각 언어모델 제공자의 공식 제품이나 공식 배포판이 아니며, 별도의 명시가 없는 한 해당 업체 및 프로젝트와의 제휴·보증·승인·후원을 의미하지 않습니다.
 
 자세한 내용은 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)를 확인해 주세요.
 
@@ -213,4 +217,5 @@ Copyright © 2026 [iamchobosalsal](https://github.com/iamchobosalsal). All right
 - [LM Studio](https://lmstudio.ai/)
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent)
 - [Telegram Bots](https://core.telegram.org/bots)
+- [Discord Developer Portal](https://discord.com/developers/applications)
 - [Slack API](https://api.slack.com/)
