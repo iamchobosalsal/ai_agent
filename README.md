@@ -10,21 +10,21 @@ AI One-touch는 **LM Studio 기반 로컬 LLM 또는 Cloud API**, **Hermes Agent
 
 ## 다운로드
 
-최신 배포: [v3.6.86](downloads/v3.6.86) · [v3.7.34](downloads/v3.7.34). Windows에서 Hermes 브라우저 도구의 한글·특수문자 인코딩 오류를 수정했습니다. [변경 내역](CHANGELOG.md)
+최신 배포: [v3.6.88](downloads/v3.6.88) · [v3.7.36](downloads/v3.7.36). 메신저 예약 알림 누락과 날짜·근거 확인 처리를 보완했습니다. [변경 내역](CHANGELOG.md)
 
 가장 간단한 방법은 저장소 상단의 초록색 **Code** 버튼을 누른 뒤 **Download ZIP**을 선택하는 것입니다.
 
 1. 내려받은 `ai_agent-main.zip`의 압축을 해제합니다.
 2. 압축을 푼 폴더의 `downloads`로 들어갑니다.
-3. 처음 설치한다면 `v3.7.34`, 기존 대시보드와 상세 관리 기능을 사용하려면 `v3.6.86` 폴더를 엽니다.
+3. 처음 설치한다면 `v3.7.36`, 기존 대시보드와 상세 관리 기능을 사용하려면 `v3.6.88` 폴더를 엽니다.
 4. 폴더 안의 `README_KO.txt`를 확인한 뒤 `1_Install_...bat` 파일을 **관리자 권한으로 실행**합니다.
 
 > 두 설치본은 자체서명 MSIX입니다. 설치 배치파일이 함께 제공된 공개 인증서를 등록하므로 Windows 관리자 권한이 필요합니다. 인증서 지문은 각 폴더의 `package-info.json`에서 확인할 수 있으며 개인키는 포함되어 있지 않습니다.
 
 | 버전 | 권장 대상 | 특징 |
 |---|---|---|
-| **v3.7.34** | 처음 설치하는 사용자 | 초보자용 UI, GPU 교체 자동 감지, 16GB GPU용 Gemma 4 선택지, Discord 연동 |
-| **v3.6.86** | 기존 화면과 상세 관리 기능을 선호하는 사용자 | 대시보드 중심 UI, Cloud API, Qwen3 Embedding 기반 RAG, Discord 연동, Hermes 스킬의 로컬 실행 도구 자동 설치·복구 |
+| **v3.7.36** | 처음 설치하는 사용자 | 초보자용 UI, GPU 교체 자동 감지, 16GB GPU용 Gemma 4 선택지, Discord 연동 |
+| **v3.6.88** | 기존 화면과 상세 관리 기능을 선호하는 사용자 | 대시보드 중심 UI, Cloud API, Qwen3 Embedding 기반 RAG, Discord 연동, Hermes 스킬의 로컬 실행 도구 자동 설치·복구 |
 
 처음 사용하는 경우 **v3.7**을 권장합니다.
 
