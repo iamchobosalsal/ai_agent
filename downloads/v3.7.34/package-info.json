@@ -1,0 +1,18 @@
+{
+  "packageName": "AI.OneTouch.Beginner.Internal",
+  "displayName": "AI One-touch Beginner",
+  "applicationId": "AIOneTouchBeginner",
+  "desktopShortcutName": "AI One-touch Beginner",
+  "packageVersion": "3.7.34.0",
+  "sourceLauncher": "AMD_AI_PC_Launcher.exe",
+  "sourceLauncherVersion": "3.7.34.0",
+  "sourceLauncherSha256": "20F5609BD38EFD0A66295A7A352AB9E642C9A3BCCE96763422D04D3F9B50B11E",
+  "msixFile": "AI_OneTouch_v3.7_Beginner_Internal.msix",
+  "msixSha256": "B43DE9E541F198300CABABB8A13CAB55E96929434D4FC7433698D79D44E9376A",
+  "resetToolFile": "Reset_Tool_LMStudio.exe",
+  "resetToolSha256": "C11A50DFB1C9C456547B13DCE9BDFD54BEFF5FEC897C99B9B366E908F6294435",
+  "publisherCertificateSubject": "CN=AI One-touch Internal Code Signing",
+  "publisherCertificateThumbprint": "8CC6F5032FF17B38DA3D4676916ECE159DFCF24C",
+  "privateKeyIncluded": false,
+  "generatedAt": "2026-09-05T21:22:51.0930738+09:00"
+}

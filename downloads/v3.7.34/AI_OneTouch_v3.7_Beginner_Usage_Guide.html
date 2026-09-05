@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI One-touch v3.7.34 왕초보 사용가이드</title>
+  <style>
+    :root{--ink:#18251d;--sub:#5e6b61;--line:#26372d;--paper:#f4f0d6;--panel:#d7d4b8;--green:#4cae58;--green-dark:#24582e;--brown:#a56e3b;--red:#a96157;--sky:#bfe8f7;--shadow:#283229}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(#bfeafa 0 48%,#79bc5d 48% 53%,#80563c 53%);background-attachment:fixed;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.65}
+    a{color:inherit}.page{width:min(1120px,calc(100% - 28px));margin:28px auto 64px;background:var(--paper);border:6px solid var(--line);box-shadow:0 0 0 5px #809087,10px 10px 0 #334039;overflow:hidden}.hero{padding:34px 38px;color:#fff;background:linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),#21372a;background-size:28px 28px}.brand{display:flex;align-items:center;gap:16px}.logo{width:62px;height:62px;display:grid;place-items:center;border:4px solid #0d1710;background:#3e9e4a;font:900 22px Consolas,monospace;box-shadow:5px 5px 0 #101912}.hero h1{margin:0;font-size:clamp(27px,4vw,44px);line-height:1.2}.hero p{margin:9px 0 0;color:#d2e3d5}.version{display:inline-block;margin-top:18px;padding:7px 11px;border:3px solid #101a13;background:#d2c98c;color:#243529;font:900 11px Consolas,monospace;box-shadow:3px 3px 0 #121a15}.quick-nav{display:grid;grid-template-columns:repeat(6,1fr);border-top:4px solid #101a13;background:#34493a}.quick-nav a{padding:13px 8px;color:#fff;text-align:center;text-decoration:none;font-size:12px;font-weight:900;border-right:1px solid #647568}.quick-nav a:last-child{border-right:0}.content{padding:34px}.intro{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:34px}.notice{padding:18px;border:4px solid #405247;background:#dad7ba;box-shadow:4px 4px 0 #6f7b73}.notice strong{display:block;margin-bottom:5px;font-size:16px}.notice.green{border-color:#2e6d38;background:#c9dcb4}.notice.orange{border-color:#76502c;background:#e0c699}.step{position:relative;margin:0 0 36px;padding:25px;border:5px solid #455249;background:#dedbc0;box-shadow:inset 0 0 0 3px #f8f3d6,7px 7px 0 var(--shadow)}.step-number{position:absolute;left:18px;top:-18px;padding:7px 12px;border:4px solid #1c2a21;background:var(--green);color:#fff;font:900 12px Consolas,monospace;box-shadow:3px 3px 0 #1d3d24}.step h2{margin:10px 0 6px;font-size:25px}.step-lead{margin:0 0 18px;color:var(--sub)}.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.action{padding:14px;border:3px solid #415047;background:#c8c6ad}.action b{display:block;margin-bottom:4px}.action code,.command code{font-family:Consolas,monospace}.shot{margin:20px 0 0;padding:12px;border:4px solid #3c4a41;background:#87958c;box-shadow:5px 5px 0 #2c372f}.shot img{display:block;width:100%;height:auto;background:#bfe8f7;cursor:zoom-in}.caption{margin:10px 2px 0;color:#f7fbf7;font-size:12px}.tip{margin-top:16px;padding:13px 15px;border-left:7px solid var(--green);background:#cbd4b8}.warn{border-left-color:#d18a35;background:#e0cfaa}.file-list{display:grid;gap:9px;margin:16px 0}.file{display:grid;grid-template-columns:44px 1fr;align-items:center;gap:12px;padding:12px;border:3px solid #4b594f;background:#cbc8af}.file span{width:40px;height:40px;display:grid;place-items:center;border:3px solid #25362b;background:#4b9551;color:#fff;font:900 10px Consolas,monospace}.file small{display:block;color:#606d62}.command-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.command{padding:17px;border:4px solid #344239;background:#26362c;color:#eff7ef;box-shadow:4px 4px 0 #172019}.command code{display:block;margin-bottom:9px;color:#b9ee9f;font-size:15px;word-break:break-word}.command span{font-size:12px;color:#c9d6cc}.checklist{display:grid;gap:9px;margin:15px 0 0;padding:0;list-style:none}.checklist li{position:relative;padding:11px 12px 11px 44px;border:3px solid #56635b;background:#cfccb2}.checklist li:before{content:"✓";position:absolute;left:12px;top:9px;width:24px;height:24px;display:grid;place-items:center;background:#4cae58;color:#fff;font-weight:900}.support{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.support article{padding:17px;border:4px solid #4d5a52;background:#cbc8ae}.support h3{margin:0 0 8px}.kbd{display:inline-block;padding:2px 7px;border:2px solid #435149;background:#f2edd0;box-shadow:0 2px 0 #707b73;font:800 12px Consolas,monospace}.footer{padding:22px 34px;border-top:5px solid var(--line);background:#2b3c31;color:#d9e6dc;text-align:center;font-size:12px}.footer b{color:#fff}.lightbox{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(9,15,11,.88);cursor:zoom-out}.lightbox.open{display:flex}.lightbox img{max-width:96vw;max-height:94vh;border:5px solid #e8e1b8;box-shadow:10px 10px 0 #182019}
+    @media(max-width:820px){.quick-nav{grid-template-columns:repeat(3,1fr)}.intro,.command-grid,.support{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.content{padding:22px}.step{padding:22px 16px}.page{width:min(100% - 14px,1120px);margin:8px auto 30px;border-width:4px}.hero{padding:26px 20px}.quick-nav a{font-size:11px}}
+    @media print{body{background:#fff}.page{width:100%;margin:0;border:0;box-shadow:none}.quick-nav,.lightbox{display:none!important}.step{break-inside:avoid;box-shadow:none}.shot{box-shadow:none}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+  </style>
+  <style>
+/* v3.7.34: 런처의 차분한 흰색·초록색 화면과 같은 사용가이드 테마 */
+    :root{--ink:#202522;--sub:#6f7771;--line:#d8d7d1;--paper:#fff;--panel:#f4f4f1;--green:#259260;--green-dark:#126b46;--brown:#eceeea;--red:#bd4e59;--sky:#f1f2ef;--shadow:rgba(32,45,38,.10)}
+    body{color:var(--ink);background:#f1f2ef;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.68}
+    .page{width:min(1160px,calc(100% - 28px));margin:24px auto 56px;background:#fff;border:1px solid #d8d7d1;border-radius:24px;box-shadow:0 18px 48px rgba(32,45,38,.10);overflow:hidden}
+    .hero{padding:42px 46px;color:#fff;background:#252925}.brand{gap:18px}.logo{width:64px;height:64px;border:0;border-radius:17px;background:#4a504c;font-family:inherit;box-shadow:none}.hero h1{font-size:clamp(28px,4vw,44px)}.hero p{color:#c8cec9}.version{margin-top:20px;padding:8px 13px;border:1px solid #617068;border-radius:999px;background:#303632;color:#d9e8df;font-family:inherit;box-shadow:none}
+    .quick-nav{border:0;background:#fff;border-bottom:1px solid var(--line)}.quick-nav a{padding:16px 8px;color:#414944;border-right:1px solid #e4e3de}.quick-nav a:hover{color:#126b46;background:#eef7f2}
+    .content{padding:38px}.intro{gap:14px}.notice{padding:19px;border:1px solid #d7d6d0;border-radius:14px;background:#f4f4f1;box-shadow:none}.notice.green{border-color:#b4d9c7;background:#eef7f2}.notice.orange{border-color:#e0c890;background:#fff8e8}
+    .step{margin-bottom:30px;padding:30px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(32,45,38,.07)}.step-number{left:24px;top:-15px;padding:7px 13px;border:0;border-radius:999px;background:var(--green);font-family:inherit;box-shadow:none}.step h2{margin-top:12px}.step-lead{color:var(--sub)}
+    .file-list,.checklist{gap:10px}.file,.checklist li{border:1px solid #deddd7;border-radius:12px;background:#f6f6f3}.file span,.checklist li:before{border:0;border-radius:8px;background:var(--green);font-family:inherit}.actions{gap:12px}.action{border:1px solid #d9d8d2;border-radius:12px;background:#f4f4f1}
+    .shot{margin-top:22px;padding:10px;border:1px solid #d6d5cf;border-radius:16px;background:#f2f3f0;box-shadow:none}.shot img{border-radius:10px;background:#fff}.caption{margin:11px 6px 2px;color:#606862}
+    .tip{border-left:5px solid var(--green);border-radius:8px;background:#eef7f2}.tip.warn{border-left-color:#ca912f;background:#fff7e6}
+    .command{border:0;border-radius:13px;background:#252925;box-shadow:none}.support article{border:1px solid #d8d7d1;border-radius:13px;background:#f5f5f2}.kbd{border:1px solid #c9cbc7;border-radius:6px;background:#fff;box-shadow:none}
+    .footer{border-top:1px solid #3b413d;background:#252925}.lightbox img{border:2px solid #fff;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.38)}
+    @media(max-width:820px){.page{border-radius:14px}.content{padding:22px}.step{padding:26px 17px}.hero{padding:30px 22px}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="brand"><div class="logo">AI</div><div><h1>AI One-touch 왕초보 사용가이드</h1><p>설치부터 AI 실행, 메신저 연결, 문서 RAG 사용까지 한 번에 따라 하기</p></div></div>
+<span class="version">초보자용 · v3.7.34</span>
+    </header>
+    <nav class="quick-nav" aria-label="빠른 이동">
+      <a href="#install">1. 설치·실행</a><a href="#power">2. AI 켜기</a><a href="#messenger">3. 메신저</a><a href="#documents">4. 문서 등록</a><a href="#rag">5. /rag 사용</a><a href="#help">6. 문제 해결</a>
+    </nav>
+    <main class="content">
+      <div class="intro">
+        <div class="notice green"><strong>v3.7.34 브라우저 호환성 업데이트</strong>Hermes 브라우저 도구의 Windows 한글·특수문자 입출력을 수정했습니다. 업데이트 설치 후 AI를 껐다 켜면 적용됩니다. 모델·RAG·답변 규칙과 브라우저 권한은 이번 수정으로 바뀌지 않습니다.</div>
+        <div class="notice orange"><strong>압축은 반드시 모두 풀기</strong>ZIP 안에서 바로 실행하지 말고 새 폴더에 압축을 완전히 푼 다음 설치 파일을 실행하세요.</div>
+      </div>
+
+      <section class="step" id="install">
+        <span class="step-number">STEP 01</span>
+        <h2>압축 풀기 → 설치 → 실행</h2>
+        <p class="step-lead">배포 ZIP을 폴더에 완전히 푼 뒤 아래 순서대로 진행합니다.</p>
+        <div class="file-list">
+          <div class="file"><span>1</span><div><b>1_Install_AI_OneTouch_Beginner_Internal.bat</b><small>마우스 오른쪽 → 관리자 권한으로 실행합니다. 인증서 신뢰와 MSIX 설치를 자동으로 진행합니다.</small></div></div>
+          <div class="file"><span>PC</span><div><b>바탕화면 → AI One-touch Beginner</b><small>설치 BAT가 바탕화면 바로가기를 자동으로 만듭니다. 아이콘을 더블 클릭하면 런처가 실행됩니다.</small></div></div>
+          <div class="file"><span>APP</span><div><b>시작 메뉴 → AI One-touch Beginner</b><small>바탕화면 아이콘이 보이지 않을 때 사용할 수 있는 실행 방법입니다.</small></div></div>
+          <div class="file"><span>GO</span><div><b>AI PC 준비 시작</b><small>처음 실행한 PC에서는 이 버튼을 한 번 누릅니다. LM Studio, 모델, Hermes와 기본 도구를 순서대로 준비합니다.</small></div></div>
+        </div>
+<div class="shot"><img src="guide-assets/00-install.png" alt="AI One-touch v3.7.34 처음 설치하기 화면" data-zoom><p class="caption">처음 실행하면 AI PC 준비 화면이 나타납니다. 초록색 <b>AI PC 준비 시작</b>을 한 번 누르면 됩니다.</p></div>
+        <div class="tip"><b>이미 설치했던 PC:</b> 새 배포본의 설치 BAT을 다시 실행하면 앱은 업데이트되고 바탕화면 바로가기도 자동으로 생성됩니다. 제거 BAT을 실행하면 바로가기도 함께 삭제됩니다.</div>
+        <div class="tip warn"><b>첫 설치는 오래 걸릴 수 있습니다.</b> 모델 크기가 약 16~22GB이므로 인터넷 속도에 따라 수십 분 이상 걸릴 수 있습니다. 진행 중에는 창을 닫지 마세요.</div>
+<div class="shot"><img src="guide-assets/06-model-download.png" alt="AI One-touch v3.7.34 언어모델 다운로드 진행 화면" data-zoom><p class="caption"><b>언어모델 다운로드 중</b>, 내려받은 용량·전체 용량·속도·남은 시간·마지막 상태 확인 시간이 표시됩니다. 줄무늬 진행 막대가 움직이고 상태 확인 시간이 갱신되면 멈춘 것이 아닙니다.</p></div>
+        <div class="tip"><b>다운로드가 정상인지 확인하는 법:</b> 화면에 <b>정상 진행 중</b> 또는 퍼센트가 보이고 <b>상태 확인 시간</b>이 계속 바뀌면 정상입니다. 오류 문구가 나오지 않았다면 모델이 큰 것이므로 기다려 주세요.</div>
+      </section>
+
+      <section class="step" id="power">
+        <span class="step-number">STEP 02</span>
+        <h2>메인 화면에서 AI 켜기</h2>
+        <p class="step-lead">설치가 끝나면 아래와 같은 전원 화면이 표시됩니다. 초록색 <b>AI 켜기</b> 버튼을 누르세요.</p>
+<div class="shot"><img src="guide-assets/01-home.png" alt="AI One-touch v3.7.34 메인 전원 화면" data-zoom><p class="caption">① 초록색 AI 켜기 · ② 메신저 연결 · ③ 문서 등록</p></div>
+        <div class="actions"><div class="action"><b>AI 켜기</b>모델 서버와 Hermes를 실행합니다.</div><div class="action"><b>AI 끄기</b>모델 서버와 메신저 Gateway를 종료합니다.</div><div class="action"><b>뒤로가기</b>메신저·문서 화면에서 마우스 뒤로가기 버튼도 사용할 수 있습니다.</div></div>
+        <h3>실행할 모델 선택</h3>
+<p>AI 켜기를 누르면 PC의 GPU 메모리에 맞는 두 모델이 표시됩니다. <b>16GB GPU</b>에서는 빠른 응답용 <b>Gemma 4 12B</b>와 답변 품질 우선 <b>Gemma 4 26B A4B IT QAT</b> 중에서 고를 수 있습니다. <b>32GB급 GPU</b>에서는 빠른 응답용 <b>Qwen 3.6 35B-A3B</b>와 답변 품질 우선 <b>Qwen 3.8 27B</b> 중에서 고를 수 있습니다.</p>
+<div class="shot"><img src="guide-assets/02-model-select.png" alt="AI One-touch 모델 선택 화면" data-zoom><p class="caption">표시되는 모델은 GPU 메모리에 따라 달라집니다. 모델 카드를 누르는 즉시 AI 시작 작업이 진행됩니다.</p></div>
+        <div class="tip"><b>권장:</b> 잘 모르겠다면 기본 추천 모델을 선택하세요. 상태 문구가 <b>AI가 켜져 있습니다</b>로 바뀌면 준비 완료입니다.</div>
+        <div class="tip warn"><b>언어모델을 바꿀 때:</b> 먼저 <b>AI 끄기</b> → 모델 선택 및 저장 → <b>AI 다시 켜기</b> 순서로 진행하세요. AI가 실행 중일 때 모델 설정을 바꾸지 마세요.</div>
+      </section>
+
+      <section class="step" id="messenger">
+        <span class="step-number">STEP 03</span>
+        <h2>메신저 연결</h2>
+        <p class="step-lead">메인 화면의 <b>메신저 연결</b>을 누르면 Telegram, Discord 또는 Slack을 선택해 연결할 수 있습니다.</p>
+        <div class="shot"><img src="guide-assets/03-messenger.png" alt="메신저 연결 설정 화면" data-zoom><p class="caption">위쪽에서 메신저를 선택하고 각 서비스의 Bot Token과 허용 사용자 정보를 저장합니다.</p></div>
+        <h3>Telegram Bot Token과 사용자 ID 확인하기</h3>
+        <ol class="checklist">
+          <li>Telegram 검색창에서 인증 표시가 있는 <b>BotFather</b>를 열고 <span class="kbd">/newbot</span>을 입력합니다.</li>
+          <li>봇 이름을 정한 뒤, 마지막이 <span class="kbd">_bot</span>으로 끝나는 사용자 이름을 입력합니다. 발급된 <b>HTTP API Token</b>이 런처의 Bot Token입니다.</li>
+          <li>검색창에서 <b>User Info · Get ID · IDbot</b>과 같은 사용자 ID 확인 봇을 열고 <span class="kbd">/start</span>를 보냅니다.</li>
+          <li>응답에 표시된 숫자 <b>Id</b>를 복사해 런처의 Chat ID에 입력합니다. 개인 대화에서는 이 사용자 ID가 Chat ID로 사용됩니다.</li>
+        </ol>
+        <div class="shot"><img src="guide-assets/05-telegram-help.png" alt="Telegram BotFather 토큰 발급과 사용자 ID 확인 예시" data-zoom><p class="caption">왼쪽: BotFather의 Bot Token 발급 위치 · 오른쪽: 사용자 ID 확인 봇의 숫자 Id 위치</p></div>
+        <div class="tip warn"><b>중요:</b> Bot Token은 비밀번호와 같습니다. 다른 사람에게 보내거나 공개 게시물에 올리지 마세요. ID 확인 봇에는 개인 문서나 민감한 메시지를 전달하지 말고 <code>/start</code>만 사용하세요. 그룹 Chat ID는 개인 사용자 ID와 다릅니다.</div>
+        <div class="tip">저장된 Bot Token은 화면에 다시 표시되지 않으며 현재 Windows 사용자만 복호화할 수 있도록 암호화해 저장합니다.</div>
+        <h3 style="margin-top:28px">Discord를 처음부터 연결하기</h3>
+        <ol class="checklist">
+          <li><b>서버 만들기:</b> Discord 왼쪽의 <b>+</b> 버튼 → <b>직접 만들기</b>를 눌러 봇을 사용할 서버를 만듭니다. 이미 서버가 있으면 건너뜁니다.</li>
+          <li><b>봇 만들기:</b> 런처에서 Discord를 선택하고 <b>Discord Bot 설정 열기</b>를 누릅니다. Developer Portal에서 <b>New Application</b> → 이름 입력 → 왼쪽 <b>Bot</b> → <b>Add Bot</b> 순서로 진행합니다.</li>
+          <li><b>Bot Token 넣기:</b> Bot 화면의 <b>Reset Token</b> 또는 <b>Copy</b>로 발급한 문자열을 런처의 <b>Bot Token</b>에 붙여 넣습니다. <b>Client ID나 Application ID가 아닙니다.</b></li>
+          <li><b>메시지 읽기 허용:</b> 같은 Bot 화면 아래의 <b>Privileged Gateway Intents</b>에서 <b>Message Content Intent</b>를 켜고 저장합니다.</li>
+          <li><b>내 사용자 ID 찾기:</b> Discord 사용자 설정(톱니바퀴) → <b>고급</b> → <b>개발자 모드</b>를 켭니다. 내 프로필을 오른쪽 클릭해 <b>사용자 ID 복사</b>를 누릅니다.</li>
+          <li><b>런처에 허용 사용자 등록:</b> 복사한 숫자를 <b>허용 사용자 ID</b>에 넣습니다. 역할 ID, 채널 ID, 기본 알림 채널 ID는 특정 범위로 제한하거나 알림을 보낼 때만 쓰므로 처음에는 비워도 됩니다.</li>
+          <li><b>봇을 서버에 초대:</b> Developer Portal의 <b>OAuth2 → URL Generator</b>에서 <b>bot</b>, <b>applications.commands</b>를 체크합니다. 권한은 <b>View Channels, Send Messages, Read Message History, Attach Files</b>를 선택합니다.</li>
+          <li>아래에 생성된 주소를 열고 방금 만든 서버를 선택한 뒤 승인합니다. Discord 서버의 멤버 목록에 봇 이름이 보이면 초대가 끝난 것입니다.</li>
+          <li><b>연결하고 켜기:</b> 런처에서 <b>설정 저장</b> → <b>저장하고 연결</b>을 누른 뒤 메인 화면에서 <b>AI 켜기</b>를 누릅니다. 서버의 봇이 온라인으로 표시될 때까지 기다립니다.</li>
+          <li><b>질문하기:</b> 서버 채널에서 <b>@봇이름 안녕</b>처럼 봇을 멘션합니다. <b>서버 채널에서 멘션할 때만 답변</b>을 끄면 허용된 채널의 일반 메시지에도 반응합니다. DM은 멘션 없이 사용할 수 있습니다.</li>
+        </ol>
+        <div class="tip warn"><b>Bot Token은 비밀번호입니다.</b> 화면 캡처, 채팅, 문서, GitHub에 올리지 마세요. 노출했다면 Developer Portal의 Bot 화면에서 즉시 <b>Reset Token</b>을 누르고 새 토큰을 런처에 저장하세요.</div>
+        <div class="tip"><b>연결 실패:</b> <b>PrivilegedIntentsRequired</b>가 보이면 Message Content Intent를 켭니다. 봇이 서버에 없으면 OAuth2 URL Generator로 초대합니다. 봇이 오프라인이면 런처 연결과 AI 켜기를 확인합니다. 온라인인데 답이 없으면 @봇이름 멘션과 허용 사용자 ID를 확인합니다.</div>
+      </section>
+
+      <section class="step" id="documents">
+        <span class="step-number">STEP 04</span>
+        <h2>문서 등록</h2>
+        <p class="step-lead">메인 화면의 <b>문서 등록</b>을 누른 뒤, 문서를 점선 영역으로 끌어다 놓습니다. 기존처럼 <b>문서 파일 추가</b>를 눌러 선택해도 됩니다.</p>
+        <div class="shot"><img src="guide-assets/04-documents.png" alt="로컬 RAG 문서 등록 화면" data-zoom><p class="caption">문서 수와 청크 수를 확인하고, 문서별 삭제 또는 전체 비우기를 사용할 수 있습니다.</p></div>
+        <div class="actions"><div class="action"><b>여러 파일 드롭</b>여러 문서를 한꺼번에 끌어다 놓을 수 있습니다. 파일당 50MB, 한 번에 200MB까지 지원합니다.</div><div class="action"><b>지원 문서</b>PDF, Word, PowerPoint, Excel, CSV, TXT, Markdown, JSON 등</div><div class="action"><b>중복 방지</b>같은 문서는 파일 해시로 확인해 중복 등록을 건너뜁니다.</div><div class="action"><b>로컬 처리</b>문서와 임베딩은 이 PC의 RAG 저장소에 보관됩니다.</div></div>
+        <div class="tip"><b>문서 등록 중에는 AI를 켜 둡니다.</b> 문서를 읽고 청크와 임베딩을 만들기 때문에 큰 문서는 시간이 걸릴 수 있습니다.</div>
+      </section>
+
+      <section class="step" id="rag">
+        <span class="step-number">STEP 05</span>
+        <h2>메신저 또는 Hermes에서 문서 질문</h2>
+        <p class="step-lead">문서 등록이 끝난 뒤 Telegram, Discord, Slack 또는 Hermes Desktop 대화창에서 아래처럼 입력합니다. 대문자와 소문자를 모두 지원합니다.</p>
+        <div class="command-grid">
+          <div class="command"><code>/rag 원장에서 R9700 대여 현황을 알려줘</code><span>등록된 문서에서 관련 근거를 찾아 답합니다.</span></div>
+          <div class="command"><code>/RAG 계약서의 납기일과 위약금을 표로 정리해줘</code><span>/RAG처럼 대문자로 입력해도 동일하게 작동합니다.</span></div>
+          <div class="command"><code>/rag 이 문서의 핵심 결론과 근거 페이지를 알려줘</code><span>질문을 구체적으로 쓰면 검색 정확도가 좋아집니다.</span></div>
+          <div class="command"><code>/ragadd C:\문서\자료.pdf</code><span>고급 사용자는 Hermes Desktop에서 파일 경로로 문서를 추가할 수도 있습니다.</span></div>
+        </div>
+        <div class="tip warn"><b>일반 질문과 구분:</b> 문서를 검색해야 하는 질문은 반드시 앞에 <code>/rag</code>를 붙이세요. RAG 답변에는 검색과 근거 검사가 포함되어 일반 대화보다 오래 걸릴 수 있습니다.</div>
+      </section>
+
+      <section class="step" id="help">
+        <span class="step-number">STEP 06</span>
+        <h2>문제가 생겼을 때 직접 해결하기</h2>
+        <div class="support">
+          <article><h3>앱이 열리지 않음</h3><p>Windows를 재부팅하고 바탕화면 바로가기로 다시 실행합니다. 계속 안 열리면 새 ZIP을 새 폴더에 완전히 푼 뒤 <b>설치 BAT</b>을 관리자 권한으로 다시 실행하세요.</p></article>
+          <article><h3>모델 다운로드가 느림</h3><p>파일이 16~22GB로 큽니다. 진행 막대가 움직이거나 상태 확인 시간이 갱신되면 정상입니다. VPN을 끄고 유선 인터넷을 권장하며, 중단 후 다시 실행하면 이어받기를 시도합니다.</p></article>
+          <article><h3>/rag 답변이 없음</h3><p>AI가 켜져 있는지, 문서 수가 1개 이상인지, 질문 앞에 <span class="kbd">/rag</span>를 붙였는지 확인합니다. Discord 서버에서는 @봇이름 멘션도 확인합니다.</p></article>
+          <article><h3>새 PC처럼 다시 시작</h3><p>위 방법으로 해결되지 않으면 <b>Reset_Tool_LMStudio.exe</b>로 초기화한 뒤 설치 BAT을 다시 실행합니다. 더 이상 사용하지 않을 때만 <b>제거 BAT</b>을 실행하세요.</p></article>
+        </div>
+        <div class="tip">위 순서대로 재시도·재설치·초기화를 진행하면 사용자가 직접 복구할 수 있습니다.</div>
+      </section>
+    </main>
+<footer class="footer"><b>AI One-touch Beginner v3.7.34</b> · 이 문서는 인터넷 연결 없이 열 수 있습니다. · 화면 이미지를 누르면 크게 볼 수 있습니다.</footer>
+  </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="화면 이미지 크게 보기"><img id="lightboxImage" alt="확대 화면"></div>
+  <script>
+    const lightbox=document.getElementById('lightbox');const lightboxImage=document.getElementById('lightboxImage');
+    document.querySelectorAll('[data-zoom]').forEach(image=>image.addEventListener('click',()=>{lightboxImage.src=image.src;lightboxImage.alt=image.alt;lightbox.classList.add('open')}));
+    lightbox.addEventListener('click',()=>lightbox.classList.remove('open'));document.addEventListener('keydown',event=>{if(event.key==='Escape')lightbox.classList.remove('open')});
+  </script>
+</body>
+</html>

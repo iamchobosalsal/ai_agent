@@ -210,7 +210,7 @@
         <strong>KV 캐시 Q8</strong>
         <strong>VRAM 기반 모델 자동 선택</strong>
       </div>
-      <p class="version">Local + Cloud API · v3.6.81</p>
+      <p class="version">Local + Cloud API · v3.6.86</p>
     </aside>
 
     <div class="main">
@@ -218,7 +218,7 @@
         <div>
           <p class="kicker">USER GUIDE</p>
           <h1>설치 및 사용 가이드</h1>
-          <p>현재 3.6.81 UI와 로컬 AI·Cloud API 실행 환경을 기준으로 설명합니다.</p>
+          <p>현재 3.6.86 UI와 로컬 AI·Cloud API 실행 환경을 기준으로 설명합니다.</p>
         </div>
         <div class="top-status"><span class="pulse"></span><div><b>기준 환경: 준비됨</b><span>ROCm 로컬 AI · Cloud API</span></div></div>
       </header>
@@ -241,7 +241,7 @@
           </div>
         </section>
 
-        <div class="callout"><b>v3.6.81 업데이트:</b> Discord 연결을 지원하고, 처음 사용하는 사람도 서버 생성부터 봇 초대와 실제 대화까지 따라 할 수 있도록 이 가이드에 전체 절차를 추가했습니다. Hermes 스킬 설치기는 SKILL.md뿐 아니라 instruction.md와 README.md의 실행 정보도 분석합니다.</div>
+        <div class="callout"><b>v3.6.86 업데이트:</b> Windows에서 Hermes의 브라우저 도구가 한글·특수문자 때문에 실패하던 UTF-8 입출력을 수정했습니다. 업데이트 설치 후 런처에서 AI를 껐다 켜면 반영됩니다. 모델·RAG·답변 규칙과 브라우저 권한은 이번 수정으로 바뀌지 않습니다.</div>
 
         <section class="content-section" id="install">
           <div class="section-head"><span class="section-num">01</span><div><h2>설치와 업데이트</h2><p>ZIP 내부에서 바로 실행하지 말고 새 폴더에 완전히 압축 해제한 뒤 설치합니다.</p></div></div>
@@ -251,7 +251,7 @@
             <article><small>LAUNCH</small><b>바탕화면 바로가기</b><p><b>AI One-touch Internal</b> 아이콘으로 런처를 실행합니다.</p></article>
             <article><small>UPDATE</small><b>새 버전 재설치</b><p>런처를 완전히 종료한 후 새 ZIP의 설치 BAT을 다시 실행합니다.</p></article>
           </div>
-          <div class="callout"><b>업데이트:</b> 상위 버전을 설치하면 기존 설정, API 연결 정보와 내려받은 LM Studio 모델은 유지하면서 런처가 업데이트됩니다. 화면이 예전과 같다면 왼쪽 아래 버전이 <b>v3.6.81</b>인지 먼저 확인하세요.</div>
+          <div class="callout"><b>업데이트:</b> 상위 버전을 설치하면 기존 설정, API 연결 정보와 내려받은 LM Studio 모델은 유지하면서 런처가 업데이트됩니다. 화면이 예전과 같다면 왼쪽 아래 버전이 <b>v3.6.86</b>인지 먼저 확인하세요.</div>
         </section>
 
         <section class="content-section" id="setup">
@@ -386,7 +386,7 @@
             <article><h3>AI 켜기 후 응답이 없음</h3><p>대시보드의 진행 로그에서 모델 로드와 Hermes 시작 여부를 확인합니다. AI를 끄고 VRAM이 해제된 뒤 다시 켭니다.</p></article>
             <article><h3>메신저가 응답하지 않음</h3><p>Token과 허용 ID를 저장했는지, AI가 켜져 있는지 확인합니다. Discord는 봇 초대·Message Content Intent·채널 멘션을, Slack은 Socket Mode 상태를 함께 확인합니다.</p></article>
             <article><h3>문서 RAG가 답하지 않음</h3><p>문서 수가 1개 이상인지, 등록 처리가 끝났는지, 질문 앞에 /rag를 붙였는지 확인합니다.</p></article>
-            <article><h3>언어가 섞이거나 화면이 잠깐 바뀜</h3><p>왼쪽 아래 버전이 v3.6.81인지 확인하고 기존 런처 창을 완전히 닫은 뒤 다시 실행합니다. 이전 버전 화면이 남아 있다면 최신 배포본을 재설치합니다.</p></article>
+            <article><h3>언어가 섞이거나 화면이 잠깐 바뀜</h3><p>왼쪽 아래 버전이 v3.6.86인지 확인하고 기존 런처 창을 완전히 닫은 뒤 다시 실행합니다. 이전 버전 화면이 남아 있다면 최신 배포본을 재설치합니다.</p></article>
             <article><h3>Cloud API 연결 오류</h3><p>API 키와 선택 모델을 확인하고 연결 확인 → 설정 저장 순서로 다시 저장합니다. 그다음 AI를 껐다가 다시 켜 Hermes 연결을 새 설정으로 시작합니다.</p></article>
             <article><h3>LM Studio 실행 시간 초과</h3><p>LM Studio를 직접 한 번 열어 초기 화면이 표시되는지 확인한 뒤 종료하고 런처에서 AI 켜기를 다시 누릅니다.</p></article>
             <article><h3>런처 환경 초기화</h3><p><b>Reset_Tool.exe</b>의 <b>런처 초기화</b> 탭을 실행하고 설치 BAT을 다시 실행합니다. 실행 중인 런처와 LM Studio를 정리한 뒤 재설치하며, 내려받은 언어모델은 유지됩니다.</p></article>
@@ -397,7 +397,7 @@
         </section>
       </main>
 
-      <footer><b>AI One-touch Internal v3.6.81</b> · 이 가이드는 인터넷 없이 열 수 있으며 브라우저 인쇄 메뉴에서 PDF로 저장할 수 있습니다.</footer>
+      <footer><b>AI One-touch Internal v3.6.86</b> · 이 가이드는 인터넷 없이 열 수 있으며 브라우저 인쇄 메뉴에서 PDF로 저장할 수 있습니다.</footer>
     </div>
   </div>
 
