@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI One-touch v3.7.40 왕초보 사용가이드</title>
+<title>AI One-touch v3.7.41 왕초보 사용가이드</title>
   <style>
     :root{--ink:#18251d;--sub:#5e6b61;--line:#26372d;--paper:#f4f0d6;--panel:#d7d4b8;--green:#4cae58;--green-dark:#24582e;--brown:#a56e3b;--red:#a96157;--sky:#bfe8f7;--shadow:#283229}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(#bfeafa 0 48%,#79bc5d 48% 53%,#80563c 53%);background-attachment:fixed;font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.65}
@@ -32,14 +32,14 @@
   <div class="page">
     <header class="hero">
       <div class="brand"><div class="logo">AI</div><div><h1>AI One-touch 왕초보 사용가이드</h1><p>설치부터 AI 실행, 메신저 연결, 문서 RAG 사용까지 한 번에 따라 하기</p></div></div>
-<span class="version">초보자용 · v3.7.40</span>
+<span class="version">초보자용 · v3.7.41</span>
     </header>
     <nav class="quick-nav" aria-label="빠른 이동">
       <a href="#install">1. 설치·실행</a><a href="#power">2. AI 켜기</a><a href="#messenger">3. 메신저</a><a href="#documents">4. 문서 등록</a><a href="#rag">5. /rag 사용</a><a href="#help">6. 문제 해결</a>
     </nav>
     <main class="content">
       <div class="intro">
-        <div class="notice green"><strong>v3.7.40 메신저 근거 검사 개선</strong>방문 예정일 때문에 추천 답변 전체가 거절되던 경로를 수정하고 검색 설명·본문 수치의 근거 범위를 구분했습니다. 독립된 부분 오류는 제한하면서 정상 설명은 유지하도록 보완했습니다. 중복 안내문을 줄였으며 추가 검수 모델·검색 호출은 없습니다. 모든 의미상의 오류를 탐지하는 기능은 아닙니다. 기존 RAG 개선도 포함합니다. 업데이트 후 런처를 다시 열고 AI를 껐다 켜세요.</div>
+        <div class="notice green"><strong>v3.7.41 공통 연결·설정 수정</strong>메신저 기본 경로의 답변 삭제·대체 후처리를 해제하고 MCP 한글 응답·출처 필드, 스킬 본문 로딩과 설정 갱신을 수정했습니다. 기존 RAG·모델 설정을 유지하고 추가 검수 모델은 호출하지 않습니다. 검색 자료의 날짜·대상·수치 연결 오류는 남아 있으므로 중요한 내용은 원문을 확인하세요.</div>
         <div class="notice orange"><strong>압축은 반드시 모두 풀기</strong>ZIP 안에서 바로 실행하지 말고 새 폴더에 압축을 완전히 푼 다음 설치 파일을 실행하세요.</div>
       </div>
 
@@ -54,7 +54,7 @@
           <div class="file"><span>GO</span><div><b>AI PC 준비 시작</b><small>처음 실행한 PC에서는 이 버튼을 한 번 누릅니다. LM Studio, 모델, Hermes와 기본 도구를 순서대로 준비합니다.</small></div></div>
         </div>
 <div class="shot"><img src="guide-assets/00-install.png" alt="AI One-touch v3.7.34 처음 설치하기 화면" data-zoom><p class="caption">처음 실행하면 AI PC 준비 화면이 나타납니다. 초록색 <b>AI PC 준비 시작</b>을 한 번 누르면 됩니다.</p></div>
-        <div class="tip"><b>이미 설치했던 PC:</b> 새 배포본의 설치 BAT을 다시 실행하면 앱은 업데이트되고 바탕화면 바로가기도 자동으로 생성됩니다. 제거 BAT을 실행하면 바로가기도 함께 삭제됩니다.</div>
+        <div class="tip"><b>이미 설치했던 PC의 업데이트 순서:</b> 기존 런처에서 <b>AI 끄기</b> → 종료 완료 후 런처 닫기 → 새 배포 폴더의 <b>설치 BAT을 관리자 권한으로 실행</b> → 새 런처의 <b>v3.7.41</b> 확인 → <b>AI 켜기</b> → 모델 서버와 Hermes·메신저 연결 시작 완료를 확인하세요. 설치나 창 재실행만으로 실행 중인 Hermes가 갱신되지는 않을 수 있습니다. 이미 설치했다면 AI 끄기 → AI 켜기를 실행하세요. PC 재부팅·초기화·제거·모델 재다운로드는 필요하지 않습니다. 기존 모델·문서·대화·예약·연결 설정을 지우지 마세요.</div>
         <div class="tip warn"><b>첫 설치는 오래 걸릴 수 있습니다.</b> 모델 크기가 약 16~22GB이므로 인터넷 속도에 따라 수십 분 이상 걸릴 수 있습니다. 진행 중에는 창을 닫지 마세요.</div>
 <div class="shot"><img src="guide-assets/06-model-download.png" alt="AI One-touch v3.7.34 언어모델 다운로드 진행 화면" data-zoom><p class="caption"><b>언어모델 다운로드 중</b>, 내려받은 용량·전체 용량·속도·남은 시간·마지막 상태 확인 시간이 표시됩니다. 줄무늬 진행 막대가 움직이고 상태 확인 시간이 갱신되면 멈춘 것이 아닙니다.</p></div>
         <div class="tip"><b>다운로드가 정상인지 확인하는 법:</b> 화면에 <b>정상 진행 중</b> 또는 퍼센트가 보이고 <b>상태 확인 시간</b>이 계속 바뀌면 정상입니다. 오류 문구가 나오지 않았다면 모델이 큰 것이므로 기다려 주세요.</div>
@@ -139,7 +139,7 @@
         <div class="tip">위 순서대로 재시도·재설치·초기화를 진행하면 사용자가 직접 복구할 수 있습니다.</div>
       </section>
     </main>
-<footer class="footer"><b>AI One-touch Beginner v3.7.40</b> · 이 문서는 인터넷 연결 없이 열 수 있습니다. · 화면 이미지를 누르면 크게 볼 수 있습니다.</footer>
+<footer class="footer"><b>AI One-touch Beginner v3.7.41</b> · 이 문서는 인터넷 연결 없이 열 수 있습니다. · 화면 이미지를 누르면 크게 볼 수 있습니다.</footer>
   </div>
   <div class="lightbox" id="lightbox" role="dialog" aria-label="화면 이미지 크게 보기"><img id="lightboxImage" alt="확대 화면"></div>
   <script>
