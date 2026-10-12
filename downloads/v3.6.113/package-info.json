@@ -1,0 +1,18 @@
+﻿{
+  "packageName": "AI.OneTouch.Internal",
+  "displayName": "AI One-touch Internal",
+  "applicationId": "AIOneTouch",
+  "desktopShortcutName": "AI One-touch Internal",
+  "packageVersion": "3.6.113.0",
+  "sourceLauncher": "AMD_AI_PC_Launcher.exe",
+  "sourceLauncherVersion": "3.6.113.0",
+  "sourceLauncherSha256": "83AE378EFBED0FF63B598F085073A4EA8844D3C295F73BACA90587B53AB676B8",
+  "msixFile": "AI_OneTouch_v3.6_Internal.msix",
+  "msixSha256": "617F16E3EDA1AE5D63B6C62A4A3DBAE2275D4D3FB13B38808DFE747209EA5138",
+  "resetToolFile": "Reset_Tool.exe",
+  "resetToolSha256": "DBEE7D8AEFE14D87A2A5C71A736FAC65E1C505C13FE6C725358F59276E589DD5",
+  "publisherCertificateSubject": "CN=AI One-touch Internal Code Signing",
+  "publisherCertificateThumbprint": "8CC6F5032FF17B38DA3D4676916ECE159DFCF24C",
+  "privateKeyIncluded": false,
+  "generatedAt": "2026-10-05T18:12:36.1179101+09:00"
+}
