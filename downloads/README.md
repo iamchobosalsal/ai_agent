@@ -6,12 +6,21 @@
 
 | 버전 | 용도 | 다운로드 |
 |---|---|---|
-| **3.7.50** | 처음 설치하는 사용자용 간편 화면 | [설치 ZIP 다운로드](https://github.com/iamchobosalsal/ai_agent/releases/download/v3.7.50/AI_OneTouch_v3.7.50_Beginner_Internal_Distribution.zip) · [폴더 보기](v3.7.50) |
-| **3.6.113** | 기존 대시보드와 상세 관리 기능 | [설치 ZIP 다운로드](https://github.com/iamchobosalsal/ai_agent/releases/download/v3.6.113/AI_OneTouch_v3.6.113_Internal_Distribution.zip) · [폴더 보기](v3.6.113) |
+| **3.7.51** | 처음 설치하는 사용자용 간편 화면 | [설치 ZIP 다운로드](https://github.com/iamchobosalsal/ai_agent/releases/download/v3.7.51/AI_OneTouch_v3.7.51_Beginner_Internal_Distribution.zip) · [폴더 보기](v3.7.51) |
+| **3.6.114** | 기존 대시보드와 상세 관리 기능 | [설치 ZIP 다운로드](https://github.com/iamchobosalsal/ai_agent/releases/download/v3.6.114/AI_OneTouch_v3.6.114_Internal_Distribution.zip) · [폴더 보기](v3.6.114) |
 
 저장소 상단의 **Code → Download ZIP**으로 두 버전을 함께 내려받을 수도 있습니다.
 
 ## 이번 업데이트
+
+- 런처에서 모델을 변경하고 AI를 껐다 켜도 Hermes Desktop에 이전 모델 선택이 남던 문제를 수정했습니다.
+- 최신 Hermes Desktop의 창 로딩 구조에 맞춰 모델 선택 동기화를 보완했습니다.
+- 기본 프로필의 이전 모델 선택과 마지막 대화 이동 상태를 초기화하고 새 대화에서 선택 모델을 확인하도록 했습니다. 저장된 대화·다른 프로필·원격 연결·작성 중인 초안은 삭제하지 않습니다.
+- Hermes 화면의 동기화 응답을 확인한 뒤에만 완료 상태를 기록합니다. 적용 위치를 찾지 못하거나 응답이 없으면 성공으로 처리하지 않습니다.
+
+업데이트 순서: **AI 끄기 → 설치 BAT을 관리자 권한으로 실행 → 새 버전 확인 → AI 켜기**. 첫 실행 때 Hermes Desktop 재빌드로 시간이 걸릴 수 있습니다. 시작 완료 후 새 대화에서 선택한 모델을 확인하세요. 초기화나 모델 재다운로드는 필요하지 않습니다.
+
+## 이전 수정도 포함합니다
 
 - **3.6 — R9700 팬 소음 감소:** 팬 제어 실행 파일 누락을 수정했습니다. R9700 한 장과 지원 드라이버 환경에서 사용하며 기본값은 꺼짐입니다.
 - **AI 끄기:** 모델·Hermes를 중지해도 대시보드와 AI 켜기 버튼은 유지됩니다.
@@ -20,14 +29,14 @@
 - **Hermes 설치 인식:** 설치 경로 인식을 보완했습니다.
 - **Reset Tool 1.1.1:** 권한 문제로 초기화가 중단되는 상황을 보완한 도구를 동봉했습니다. 일반 업데이트에는 초기화가 필요하지 않습니다.
 
-[3.6.113 변경 내역](../RELEASE_NOTES_v3.6.113.md) · [3.7.50 변경 내역](../RELEASE_NOTES_v3.7.50.md)
+[3.6.114 변경 내역](../RELEASE_NOTES_v3.6.114.md) · [3.7.51 변경 내역](../RELEASE_NOTES_v3.7.51.md)
 
 ## 기존 사용자 업데이트 순서
 
 1. 기존 런처에서 **AI 끄기**를 누르고 종료 완료를 확인한 뒤 런처를 닫습니다.
 2. 새 설치 ZIP을 완전히 압축 해제합니다.
 3. 해당 폴더의 **1_Install_...bat을 관리자 권한으로 실행**합니다.
-4. 새 런처에서 **3.6.113 또는 3.7.50**을 확인하고 **AI 켜기**를 누릅니다.
+4. 새 런처에서 **3.6.114 또는 3.7.51**을 확인하고 **AI 켜기**를 누릅니다.
 5. 모델 서버와 Hermes·메신저 연결 시작 완료를 확인합니다.
 
 기존 모델·문서·대화·예약·연결 설정을 지우지 마세요. 기존 MSIX 패키지 ID와 서명 인증서를 유지합니다. MSI 시험판과 MSIX는 별도 설치이며 자동 데이터 이전은 제공하지 않습니다.
